@@ -1,0 +1,70 @@
+# Interface Control Document template schema
+template_id: icd
+doc_type: ICD
+name: Interface Control Document
+version: "1.0"
+organization: RCI - Research Centre Imarat
+
+numbering:
+  section_id_format: "{N}.{M}"
+  requirement_id_format: "IR-{PROJECT}-{NNNN}"
+  annexure_prefix: "ANN"
+
+header:
+  document_control:
+    - {field: document_title, type: text, required: true}
+    - {field: document_number, type: text}
+    - {field: project_name, type: text, required: true}
+    - {field: revision, type: text, default: "Rev A"}
+    - {field: date, type: date}
+    - {field: prepared_by, type: text}
+    - {field: reviewed_by, type: text}
+    - {field: approved_by, type: text}
+  approval_signatures: true
+  table_of_contents: true
+
+sections:
+  - id: "1"
+    title: Introduction
+    type: free_text
+    required: true
+    data_sources: [irs, mom]
+    fields:
+      - {id: purpose, title: Purpose, type: free_text, required: true}
+      - {id: scope, title: Scope, type: free_text, required: true}
+      - {id: references, title: References, type: table, columns: [ref_id, title, source]}
+
+  - id: "2"
+    title: Interface Requirements
+    type: requirements
+    required: true
+    data_sources: [irs, sysrs]
+    requirement_filter:
+      req_type: interface
+    output:
+      presentation: table
+      columns: [requirement_id, requirement, interface, direction, protocol, source]
+    instructions: >-
+      Populated from the interface requirements in the registry (IRS source).
+      Reproduction is verbatim; no new interface formats may be invented.
+
+  - id: "3"
+    title: Message Formats and Data Structures
+    type: free_text
+    required: true
+    data_sources: [irs, code]
+    fields:
+      - {id: message_schemas, title: Message Schemas, type: table, columns: [message, schema_source, fields]}
+      - {id: encoding, title: Encoding Rules, type: free_text}
+
+  - id: "4"
+    title: Interface Traceability
+    type: traceability_matrix
+    required: true
+    data_sources: [traceability_links]
+    output:
+      presentation: table
+      columns: [sysrs_req, irs_req, artifact, link_type]
+    instructions: >-
+      Maps each interface requirement to its SysRS parent and to any code
+      artifact that implements it.

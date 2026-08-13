@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "passed": true,
+  "missing_requirement_references": [],
+  "missing_sections": [],
+  "uncovered_requirements": [],
+  "referenced_ids": [
+    "IR-0101",
+    "IR-0102",
+    "IR-0103",
+    "IR-0104",
+    "REQ-0001",
+    "REQ-0002",
+    "REQ-0003",
+    "REQ-0004",
+    "REQ-0005",
+    "REQ-0006",
+    "REQ-0007",
+    "REQ-0008",
+    "REQ-0009",
+    "REQ-0010",
+    "REQ-0011"
+  ],
+  "registry_count": 45
+}

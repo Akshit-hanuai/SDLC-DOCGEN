@@ -1,0 +1,1086 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": "",
+    "classification": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "Purpose: This Software Development Document (SDD) outlines the requirements and design considerations for the [Project Name] software project, a critical component of [Defense Department/Agency] research and development efforts. The software aims to [briefly describe the software's purpose and intended functionality].  This document serves as a blueprint for the development team, ensuring alignment with strategic objectives and fostering efficient collaboration throughout the project lifecycle.",
+      "scope": "Field: Scope\n\nThis Software Development Document (SDD) outlines the scope of the [Project Name] R&D software project, which aims to develop a novel [Software Function/Application]. The project focuses on [Specific area of focus within the broader field].  The SDD will detail the following:\n\nTarget Audience: This document is intended for all stakeholders involved in the development and deployment of the software, including engineers, testers, project managers, and subject matter experts.\nProject Objectives: The project aims to achieve [List key objectives, e.g., develop a prototype, demonstrate feasibility, etc.].\nDeliverables: The project will deliver [List specific deliverables, e.g., software code, technical documentation, user manuals].\nTimeline and Milestones: A detailed timeline outlining the project's phases and milestones will be provided in the following sections.\n\nThis SDD serves as a comprehensive guide for all involved parties to ensure alignment on project goals, expectations, and deliverables.\n\nREQ-0001: Define the specific area of focus within the broader field of [Software Function/Application].",
+      "related_documents": []
+    },
+    "2": {
+      "design_approach": "Design Approach: This system will be designed using an iterative approach, incorporating agile methodologies and continuous integration practices.  The development process will prioritize rapid prototyping and user feedback to ensure alignment with evolving requirements and operational needs. Key features of the design approach include:\n\nAgile Development: Utilizing Scrum or Kanban methodologies for project management, ensuring flexibility and responsiveness to changing priorities.\nContinuous Integration & Deployment (CI/CD): Implementing automated build, testing, and deployment pipelines to accelerate development cycles and minimize integration risks.\nIterative Design:  Developing the system in phases, with each phase incorporating user feedback and rigorous testing before proceeding to the next stage. This iterative approach allows for early identification of potential issues and facilitates continuous improvement throughout the project lifecycle.\n\nThe design process will be guided by a collaborative environment involving developers, subject matter experts, and end-users. Regular communication channels will facilitate knowledge sharing, problem solving, and decision making throughout the development process.",
+      "module_decomposition": [
+        {
+          "module": "2 System Overview",
+          "responsibility": "2 System Overview",
+          "source": "2 System Overview"
+        },
+        {
+          "module": "2 System Overview",
+          "responsibility": "2 System Overview",
+          "source": "2 System Overview"
+        },
+        {
+          "module": "2 System Overview",
+          "responsibility": "2 System Overview",
+          "source": "2 System Overview"
+        },
+        {
+          "module": "2 System Overview",
+          "responsibility": "2 System Overview",
+          "source": "2 System Overview"
+        },
+        {
+          "module": "2 System Overview",
+          "responsibility": "2 System Overview",
+          "source": "2 System Overview"
+        },
+        {
+          "module": "2 System Overview",
+          "responsibility": "2 System Overview",
+          "source": "2 System Overview"
+        },
+        {
+          "module": "2 System Overview",
+          "responsibility": "2 System Overview",
+          "source": "2 System Overview"
+        },
+        {
+          "module": "2 System Overview",
+          "responsibility": "2 System Overview",
+          "source": "2 System Overview"
+        }
+      ],
+      "architectural_decisions": "Key Architectural Decisions\n\nThis section outlines the key architectural decisions made for the R&D software project, which will be crucial to achieving its objectives and meeting user needs. These decisions are based on a thorough analysis of the project's requirements and constraints, as well as an understanding of existing technologies and best practices in defence R&D software development.\n\nModular Architecture: The system is designed using a modular architecture to facilitate independent development, testing, and deployment of individual components. This approach allows for greater flexibility and scalability, enabling the project team to adapt to changing requirements and prioritize specific functionalities.\n\nCloud-Based Infrastructure:  The R&D software will leverage cloud-based infrastructure for its core functionality. This decision was made due to the advantages it offers in terms of scalability, cost efficiency, and access to advanced computing resources. The chosen cloud provider will be selected based on factors such as security, reliability, and compliance with relevant regulations.\n\nSecure Data Handling:  The system prioritizes data security throughout its lifecycle. This includes implementing robust encryption protocols for all sensitive information, adhering to strict data governance policies, and employing multi-factor authentication for user access control. The chosen security measures will be regularly reviewed and updated to ensure compliance with evolving threats and regulations.\n\nOpen Source Integration:  The system will integrate with open source tools and libraries where appropriate to leverage existing functionalities and reduce development time. This approach allows for greater flexibility, faster innovation, and reduced costs while maintaining a high level of security and reliability.\n\nThese key architectural decisions are essential for achieving the project's goals and ensuring its long-term success. The SDD will further detail each decision with specific implementation plans and considerations."
+    },
+    "3": {
+      "requirements": [
+        {
+          "requirement_id": "C-acquisition.AcquisitionEngine",
+          "requirement": "AcquisitionEngine",
+          "artifact_id": "C-acquisition.AcquisitionEngine",
+          "artifact": "AcquisitionEngine",
+          "artifact_type": "code_artifact",
+          "module": "acquisition",
+          "description": "AcquisitionEngine"
+        },
+        {
+          "requirement_id": "C-acquisition.Sample",
+          "requirement": "Sample",
+          "artifact_id": "C-acquisition.Sample",
+          "artifact": "Sample",
+          "artifact_type": "code_artifact",
+          "module": "acquisition",
+          "description": "Sample"
+        },
+        {
+          "requirement_id": "C-api.HealthReport",
+          "requirement": "message HealthReport {",
+          "artifact_id": "C-api.HealthReport",
+          "artifact": "message HealthReport {",
+          "artifact_type": "code_artifact",
+          "module": "api",
+          "description": "message HealthReport {"
+        },
+        {
+          "requirement_id": "C-api.StartCommand",
+          "requirement": "message StartCommand {",
+          "artifact_id": "C-api.StartCommand",
+          "artifact": "message StartCommand {",
+          "artifact_type": "code_artifact",
+          "module": "api",
+          "description": "message StartCommand {"
+        },
+        {
+          "requirement_id": "C-api.TelemetrySample",
+          "requirement": "message TelemetrySample {",
+          "artifact_id": "C-api.TelemetrySample",
+          "artifact": "message TelemetrySample {",
+          "artifact_type": "code_artifact",
+          "module": "api",
+          "description": "message TelemetrySample {"
+        },
+        {
+          "requirement_id": "C-processing.HealthMonitor",
+          "requirement": "HealthMonitor",
+          "artifact_id": "C-processing.HealthMonitor",
+          "artifact": "HealthMonitor",
+          "artifact_type": "code_artifact",
+          "module": "processing",
+          "description": "HealthMonitor"
+        },
+        {
+          "requirement_id": "C-server./acquire/start",
+          "requirement": "HTTP @app.post -> /acquire/start",
+          "artifact_id": "C-server./acquire/start",
+          "artifact": "HTTP @app.post -> /acquire/start",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "HTTP @app.post -> /acquire/start"
+        },
+        {
+          "requirement_id": "C-server./acquire/stop",
+          "requirement": "HTTP @app.post -> /acquire/stop",
+          "artifact_id": "C-server./acquire/stop",
+          "artifact": "HTTP @app.post -> /acquire/stop",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "HTTP @app.post -> /acquire/stop"
+        },
+        {
+          "requirement_id": "C-server./health",
+          "requirement": "HTTP @app.get -> /health",
+          "artifact_id": "C-server./health",
+          "artifact": "HTTP @app.get -> /health",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "HTTP @app.get -> /health"
+        },
+        {
+          "requirement_id": "C-server./mtbf",
+          "requirement": "HTTP @app.get -> /mtbf",
+          "artifact_id": "C-server./mtbf",
+          "artifact": "HTTP @app.get -> /mtbf",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "HTTP @app.get -> /mtbf"
+        },
+        {
+          "requirement_id": "C-server./samples",
+          "requirement": "HTTP @app.get -> /samples",
+          "artifact_id": "C-server./samples",
+          "artifact": "HTTP @app.get -> /samples",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "HTTP @app.get -> /samples"
+        },
+        {
+          "requirement_id": "C-server.get_mtbf",
+          "requirement": "get_mtbf",
+          "artifact_id": "C-server.get_mtbf",
+          "artifact": "get_mtbf",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "get_mtbf"
+        },
+        {
+          "requirement_id": "C-server.get_samples",
+          "requirement": "get_samples",
+          "artifact_id": "C-server.get_samples",
+          "artifact": "get_samples",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "get_samples"
+        },
+        {
+          "requirement_id": "C-server.health",
+          "requirement": "health",
+          "artifact_id": "C-server.health",
+          "artifact": "health",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "health"
+        },
+        {
+          "requirement_id": "C-server.start_acquisition",
+          "requirement": "start_acquisition",
+          "artifact_id": "C-server.start_acquisition",
+          "artifact": "start_acquisition",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "start_acquisition"
+        },
+        {
+          "requirement_id": "C-server.stop_acquisition",
+          "requirement": "stop_acquisition",
+          "artifact_id": "C-server.stop_acquisition",
+          "artifact": "stop_acquisition",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "stop_acquisition"
+        }
+      ],
+      "gaps": []
+    },
+    "4": {
+      "external_interfaces": [
+        {
+          "interface": "IRS_v2.0.docx",
+          "direction": "IRS_v2.0.docx",
+          "protocol": "IRS_v2.0.docx",
+          "source": "IRS_v2.0.docx"
+        },
+        {
+          "interface": "3. Interface Requirements",
+          "direction": "3. Interface Requirements",
+          "protocol": "3. Interface Requirements",
+          "source": "3. Interface Requirements"
+        },
+        {
+          "interface": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/api.proto",
+          "direction": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/api.proto",
+          "protocol": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/api.proto",
+          "source": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/api.proto"
+        },
+        {
+          "interface": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "direction": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "protocol": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "source": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py"
+        },
+        {
+          "interface": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "direction": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "protocol": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "source": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py"
+        },
+        {
+          "interface": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "direction": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "protocol": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "source": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py"
+        },
+        {
+          "interface": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "direction": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "protocol": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "source": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py"
+        },
+        {
+          "interface": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "direction": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "protocol": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "source": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py"
+        }
+      ],
+      "data_structures": "Interface Design - Shared Data Structures\n\n4.1 Overview\n\nThis section details the shared data structures that will be utilized by various components of the R&D software project. These structures are designed to facilitate efficient communication and data exchange between different modules, ensuring interoperability and seamless integration.\n\n4.2 Data Structure Definitions\n\nTelemetry Sample Envelopes:  The ground segment interface transmits telemetry sample envelopes as defined in api.proto (message TelemetrySample). This message format will be used to represent sensor readings for transmission to the ground segment.\n    * REQ-0101: The ground segment interface shall transmit telemetry sample envelopes as defined in api.proto (message TelemetrySample).\n\nAcquisition Command:  The acquisition command interface accepts a StartCommand message to initiate the acquisition process. This message contains information about the number of channels and the desired sample rate.\n    * REQ-0102: The acquisition command interface shall accept a StartCommand message to begin acquisition.\n\nHealth Report:  The health reporting interface exposes an MTBF estimate as defined in api.proto (message HealthReport). This report provides information about the sensor's operational status and estimated Mean Time Between Failures.\n    * REQ-0103: The health reporting interface shall expose an MTBF estimate as defined in api.proto (message HealthReport).\n\n4.3 Data Structure Implementation\n\nThe implementation of these data structures will be based on the following principles:\n\nModularity:  Data structures should be designed to be modular and reusable across different components of the software project.\nEfficiency:  Structures should be optimized for efficient storage and retrieval of data, minimizing memory footprint and processing overhead.\nInteroperability:  Data structures should adhere to established protocols and standards to ensure seamless communication between different modules.\n\n4.4 Data Structure Usage\n\nThe shared data structures will be utilized by various components of the R&D software project, including:\n\nGround Segment Interface:  Transmits telemetry sample envelopes to the ground segment.\nAcquisition Command Interface:  Receives and processes acquisition command messages.\nHealth Reporting Interface:  Exposes MTBF estimates for sensor health reporting.\nSensor Interface:  Provides raw sample streams at the configured sample rate.\n\n4.5 Future Considerations\n\nFuture development of the R&D software project may require additional data structures to support new functionalities and features. These future considerations will be addressed in subsequent iterations of the SDD."
+    },
+    "5": {
+      "rows": [
+        {
+          "from": "IR-0101",
+          "to": "IR-0102",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0102",
+          "to": "IR-0103",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0103",
+          "to": "IR-0102",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0103",
+          "to": "IR-0104",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0002",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0002",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0006",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0002",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "C-acquisition.AcquisitionEngine",
+          "to": "REQ-0001",
+          "link_type": "implements",
+          "confidence": 0.800000011920929
+        },
+        {
+          "from": "C-processing.HealthMonitor",
+          "to": "REQ-0002",
+          "link_type": "implements",
+          "confidence": 0.800000011920929
+        },
+        {
+          "from": "TP-0001",
+          "to": "IR-0101",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0002",
+          "to": "IR-0102",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0003",
+          "to": "IR-0103",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0004",
+          "to": "IR-0104",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0005",
+          "to": "REQ-0101",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0006",
+          "to": "REQ-0102",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0007",
+          "to": "REQ-0103",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0008",
+          "to": "REQ-0104",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0009",
+          "to": "REQ-0011",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0010",
+          "to": "REQ-0001",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0011",
+          "to": "REQ-0003",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0012",
+          "to": "REQ-0004",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0013",
+          "to": "REQ-0005",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0014",
+          "to": "REQ-0006",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0015",
+          "to": "REQ-0002",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0016",
+          "to": "REQ-0007",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0017",
+          "to": "REQ-0008",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0018",
+          "to": "REQ-0009",
+          "link_type": "verifies",
+          "confidence": 1.0
+        }
+      ],
+      "uncovered": [
+        "C-acquisition.Sample",
+        "C-api.HealthReport",
+        "C-api.StartCommand",
+        "C-api.TelemetrySample",
+        "C-server./acquire/start",
+        "C-server./acquire/stop",
+        "C-server./health",
+        "C-server./mtbf",
+        "C-server./samples",
+        "C-server.get_mtbf",
+        "C-server.get_samples",
+        "C-server.health",
+        "C-server.start_acquisition",
+        "C-server.stop_acquisition",
+        "REQ-0010"
+      ]
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [],
+      "scope": [],
+      "related_documents": []
+    },
+    "2": {
+      "design_approach": [
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        }
+      ],
+      "module_decomposition": [
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        }
+      ],
+      "architectural_decisions": [
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        }
+      ]
+    },
+    "3": [
+      "C-acquisition.AcquisitionEngine",
+      "C-acquisition.Sample",
+      "C-api.HealthReport",
+      "C-api.StartCommand",
+      "C-api.TelemetrySample",
+      "C-processing.HealthMonitor",
+      "C-server./acquire/start",
+      "C-server./acquire/stop",
+      "C-server./health",
+      "C-server./mtbf",
+      "C-server./samples",
+      "C-server.get_mtbf",
+      "C-server.get_samples",
+      "C-server.health",
+      "C-server.start_acquisition",
+      "C-server.stop_acquisition"
+    ],
+    "4": {
+      "external_interfaces": [
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "IRS_v2.0.docx",
+          "req_ids": []
+        },
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "3. Interface Requirements",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103",
+            "IR-0104"
+          ]
+        },
+        {
+          "source": "code",
+          "source_file": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/api.proto",
+          "heading": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/api.proto",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103"
+          ]
+        },
+        {
+          "source": "code",
+          "source_file": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        }
+      ],
+      "data_structures": [
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "3. Interface Requirements",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103",
+            "IR-0104"
+          ]
+        },
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "IRS_v2.0.docx",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/api.proto",
+          "heading": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/api.proto",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103"
+          ]
+        },
+        {
+          "source": "code",
+          "source_file": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "storage/59a35f88-3298-4700-bf44-1e0ce35e97ae/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        }
+      ]
+    },
+    "5": [
+      {
+        "from": "IR-0101",
+        "to": "IR-0102",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0102",
+        "to": "IR-0103",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0103",
+        "to": "IR-0102",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0103",
+        "to": "IR-0104",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0002",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0002",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0006",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0002",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "C-acquisition.AcquisitionEngine",
+        "to": "REQ-0001",
+        "link_type": "implements",
+        "confidence": 0.800000011920929
+      },
+      {
+        "from": "C-processing.HealthMonitor",
+        "to": "REQ-0002",
+        "link_type": "implements",
+        "confidence": 0.800000011920929
+      },
+      {
+        "from": "TP-0001",
+        "to": "IR-0101",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0002",
+        "to": "IR-0102",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0003",
+        "to": "IR-0103",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0004",
+        "to": "IR-0104",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0005",
+        "to": "REQ-0101",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0006",
+        "to": "REQ-0102",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0007",
+        "to": "REQ-0103",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0008",
+        "to": "REQ-0104",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0009",
+        "to": "REQ-0011",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0010",
+        "to": "REQ-0001",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0011",
+        "to": "REQ-0003",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0012",
+        "to": "REQ-0004",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0013",
+        "to": "REQ-0005",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0014",
+        "to": "REQ-0006",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0015",
+        "to": "REQ-0002",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0016",
+        "to": "REQ-0007",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0017",
+        "to": "REQ-0008",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0018",
+        "to": "REQ-0009",
+        "link_type": "verifies",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "_compliance": {
+    "status": "pass",
+    "passed": true,
+    "missing_requirement_references": [],
+    "missing_sections": [],
+    "uncovered_requirements": [
+      "REQ-0010"
+    ],
+    "referenced_ids": [
+      "IR-0101",
+      "IR-0102",
+      "IR-0103",
+      "IR-0104",
+      "REQ-0001",
+      "REQ-0002",
+      "REQ-0003",
+      "REQ-0004",
+      "REQ-0005",
+      "REQ-0006",
+      "REQ-0007",
+      "REQ-0008",
+      "REQ-0009",
+      "REQ-0011",
+      "REQ-0101",
+      "REQ-0102",
+      "REQ-0103",
+      "REQ-0104"
+    ],
+    "registry_count": 53
+  }
+}

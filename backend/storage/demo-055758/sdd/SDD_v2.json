@@ -1,0 +1,1063 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": "",
+    "classification": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "DRAFT (mock, no grounding chunks retrieved): please review and expand.",
+      "scope": "DRAFT (mock, no grounding chunks retrieved): please review and expand.",
+      "related_documents": []
+    },
+    "2": {
+      "design_approach": "DRAFT (mock, no grounding chunks retrieved): please review and expand.",
+      "module_decomposition": [],
+      "architectural_decisions": "DRAFT (mock, no grounding chunks retrieved): please review and expand."
+    },
+    "3": {
+      "requirements": [
+        {
+          "requirement_id": "C-acquisition.AcquisitionEngine",
+          "requirement": "AcquisitionEngine",
+          "artifact_id": "C-acquisition.AcquisitionEngine",
+          "artifact": "AcquisitionEngine",
+          "artifact_type": "code_artifact",
+          "module": "acquisition",
+          "description": "AcquisitionEngine"
+        },
+        {
+          "requirement_id": "C-acquisition.Sample",
+          "requirement": "Sample",
+          "artifact_id": "C-acquisition.Sample",
+          "artifact": "Sample",
+          "artifact_type": "code_artifact",
+          "module": "acquisition",
+          "description": "Sample"
+        },
+        {
+          "requirement_id": "C-api.HealthReport",
+          "requirement": "message HealthReport {",
+          "artifact_id": "C-api.HealthReport",
+          "artifact": "message HealthReport {",
+          "artifact_type": "code_artifact",
+          "module": "api",
+          "description": "message HealthReport {"
+        },
+        {
+          "requirement_id": "C-api.StartCommand",
+          "requirement": "message StartCommand {",
+          "artifact_id": "C-api.StartCommand",
+          "artifact": "message StartCommand {",
+          "artifact_type": "code_artifact",
+          "module": "api",
+          "description": "message StartCommand {"
+        },
+        {
+          "requirement_id": "C-api.TelemetrySample",
+          "requirement": "message TelemetrySample {",
+          "artifact_id": "C-api.TelemetrySample",
+          "artifact": "message TelemetrySample {",
+          "artifact_type": "code_artifact",
+          "module": "api",
+          "description": "message TelemetrySample {"
+        },
+        {
+          "requirement_id": "C-processing.HealthMonitor",
+          "requirement": "HealthMonitor",
+          "artifact_id": "C-processing.HealthMonitor",
+          "artifact": "HealthMonitor",
+          "artifact_type": "code_artifact",
+          "module": "processing",
+          "description": "HealthMonitor"
+        },
+        {
+          "requirement_id": "C-server./acquire/start",
+          "requirement": "HTTP @app.post -> /acquire/start",
+          "artifact_id": "C-server./acquire/start",
+          "artifact": "HTTP @app.post -> /acquire/start",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "HTTP @app.post -> /acquire/start"
+        },
+        {
+          "requirement_id": "C-server./acquire/stop",
+          "requirement": "HTTP @app.post -> /acquire/stop",
+          "artifact_id": "C-server./acquire/stop",
+          "artifact": "HTTP @app.post -> /acquire/stop",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "HTTP @app.post -> /acquire/stop"
+        },
+        {
+          "requirement_id": "C-server.get_mtbf",
+          "requirement": "get_mtbf",
+          "artifact_id": "C-server.get_mtbf",
+          "artifact": "get_mtbf",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "get_mtbf"
+        },
+        {
+          "requirement_id": "C-server.get_samples",
+          "requirement": "get_samples",
+          "artifact_id": "C-server.get_samples",
+          "artifact": "get_samples",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "get_samples"
+        },
+        {
+          "requirement_id": "C-server./health",
+          "requirement": "HTTP @app.get -> /health",
+          "artifact_id": "C-server./health",
+          "artifact": "HTTP @app.get -> /health",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "HTTP @app.get -> /health"
+        },
+        {
+          "requirement_id": "C-server.health",
+          "requirement": "health",
+          "artifact_id": "C-server.health",
+          "artifact": "health",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "health"
+        },
+        {
+          "requirement_id": "C-server./mtbf",
+          "requirement": "HTTP @app.get -> /mtbf",
+          "artifact_id": "C-server./mtbf",
+          "artifact": "HTTP @app.get -> /mtbf",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "HTTP @app.get -> /mtbf"
+        },
+        {
+          "requirement_id": "C-server./samples",
+          "requirement": "HTTP @app.get -> /samples",
+          "artifact_id": "C-server./samples",
+          "artifact": "HTTP @app.get -> /samples",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "HTTP @app.get -> /samples"
+        },
+        {
+          "requirement_id": "C-server.start_acquisition",
+          "requirement": "start_acquisition",
+          "artifact_id": "C-server.start_acquisition",
+          "artifact": "start_acquisition",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "start_acquisition"
+        },
+        {
+          "requirement_id": "C-server.stop_acquisition",
+          "requirement": "stop_acquisition",
+          "artifact_id": "C-server.stop_acquisition",
+          "artifact": "stop_acquisition",
+          "artifact_type": "code_artifact",
+          "module": "server",
+          "description": "stop_acquisition"
+        }
+      ],
+      "gaps": [
+        "IR-0101 (irs) is not covered in this section.",
+        "IR-0102 (irs) is not covered in this section.",
+        "IR-0103 (irs) is not covered in this section.",
+        "IR-0104 (irs) is not covered in this section.",
+        "REQ-0001 (sysrs) is not covered in this section.",
+        "REQ-0003 (sysrs) is not covered in this section.",
+        "REQ-0004 (sysrs) is not covered in this section.",
+        "REQ-0005 (sysrs) is not covered in this section.",
+        "REQ-0006 (sysrs) is not covered in this section.",
+        "REQ-0002 (sysrs) is not covered in this section.",
+        "REQ-0007 (sysrs) is not covered in this section.",
+        "REQ-0008 (sysrs) is not covered in this section.",
+        "REQ-0009 (sysrs) is not covered in this section.",
+        "REQ-0010 (sysrs) is not covered in this section."
+      ]
+    },
+    "4": {
+      "external_interfaces": [
+        {
+          "interface": "IRS_v2.0.docx",
+          "direction": "IRS_v2.0.docx",
+          "protocol": "IRS_v2.0.docx",
+          "source": "IRS_v2.0.docx"
+        },
+        {
+          "interface": "3. Interface Requirements",
+          "direction": "3. Interface Requirements",
+          "protocol": "3. Interface Requirements",
+          "source": "3. Interface Requirements"
+        },
+        {
+          "interface": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/api.proto",
+          "direction": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/api.proto",
+          "protocol": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/api.proto",
+          "source": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/api.proto"
+        },
+        {
+          "interface": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "direction": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "protocol": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "source": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py"
+        },
+        {
+          "interface": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "direction": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "protocol": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "source": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py"
+        },
+        {
+          "interface": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "direction": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "protocol": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "source": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py"
+        },
+        {
+          "interface": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "direction": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "protocol": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "source": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py"
+        },
+        {
+          "interface": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "direction": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "protocol": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "source": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py"
+        }
+      ],
+      "data_structures": "DRAFT (mock, grounded on 8 retrieved chunks):\n- ID | Type | Requirement IR-0101 | interface | The ground segment interface shall transmit telemetry sample envelopes as defined in api.proto (message TelemetrySample). IR-0102 | interface | The acquisition command interface shall accept a StartCommand message to begin acquisition. IR-0103 | interface | The health reporting interface shall expose an MTBF estimate as defined in api.proto (message HealthReport). IR-0104 | interface | The sensor interface shall provide a raw sample stream at the con  [source: IRS_v2.0.docx / 3. Interface Requirements]\n- Interface Requirements Specification (IRS) Revision 2.0 \u2014 interface requirements for the ground segment and sensor interfaces.  [source: IRS_v2.0.docx / IRS_v2.0.docx]\n- syntax = \"proto3\"; package telemetry_acq; // Telemetry sample envelope (interface IR-0101). message TelemetrySample { uint32 channel = 1; double timestamp = 2; repeated double values = 3; } // Command message to start acquisition (interface IR-0102). message StartCommand { uint32 num_channels = 1; uint32 sample_rate_hz = 2; } // Health status report (interface IR-0103). message HealthReport { string status = 1; double mtbf_estimate_hours = 2; }  [source: /home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/api.proto / /home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/api.proto]\n- art(self) -> None: self._running = True for channel in range(self.num_channels): thread = threading.Thread(target=self._acquire, args=(channel,), daemon=True) thread.start() self._threads.append(thread) def _acquire(self, channel: int) -> None: while self._running: sample = Sample(channel=channel, timestamp=time.time(), values=[0.0, 0.0, 0.0]) self._queue.put(sample) time.sleep(1.0 / self.sample_rate_hz) def read(self, timeout_s: float = 1.0) -> list[Sample]: samples: list[Sample] = [] for _ in   [source: /home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py / /home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py]\n- elf._running = False for thread in self._threads: thread.join(timeout=1.0)  [source: /home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py / /home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py]"
+    },
+    "5": {
+      "rows": [
+        {
+          "from": "TP-0001",
+          "to": "IR-0101",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "IR-0101",
+          "to": "IR-0102",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0103",
+          "to": "IR-0102",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0002",
+          "to": "IR-0102",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "IR-0102",
+          "to": "IR-0103",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0003",
+          "to": "IR-0103",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "IR-0103",
+          "to": "IR-0104",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0004",
+          "to": "IR-0104",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "C-acquisition.AcquisitionEngine",
+          "to": "REQ-0001",
+          "link_type": "implements",
+          "confidence": 0.800000011920929
+        },
+        {
+          "from": "TP-0006",
+          "to": "REQ-0001",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0002",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0007",
+          "to": "REQ-0002",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0002",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0002",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "C-processing.HealthMonitor",
+          "to": "REQ-0002",
+          "link_type": "implements",
+          "confidence": 0.800000011920929
+        },
+        {
+          "from": "TP-0011",
+          "to": "REQ-0002",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0003",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0004",
+          "to": "REQ-0003",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0003",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0007",
+          "to": "REQ-0003",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0008",
+          "to": "REQ-0004",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0003",
+          "to": "REQ-0005",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0004",
+          "to": "REQ-0005",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0005",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0002",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0009",
+          "to": "REQ-0005",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0003",
+          "to": "REQ-0006",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0006",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0006",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0010",
+          "to": "REQ-0006",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0002",
+          "to": "REQ-0007",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0007",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0012",
+          "to": "REQ-0007",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0007",
+          "to": "REQ-0008",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0008",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0013",
+          "to": "REQ-0008",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0009",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0010",
+          "to": "REQ-0009",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0014",
+          "to": "REQ-0009",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0010",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0005",
+          "to": "REQ-0011",
+          "link_type": "verifies",
+          "confidence": 1.0
+        }
+      ],
+      "uncovered": [
+        "C-acquisition.Sample",
+        "C-api.HealthReport",
+        "C-api.StartCommand",
+        "C-api.TelemetrySample",
+        "C-server./acquire/start",
+        "C-server./acquire/stop",
+        "C-server./health",
+        "C-server./mtbf",
+        "C-server./samples",
+        "C-server.get_mtbf",
+        "C-server.get_samples",
+        "C-server.health",
+        "C-server.start_acquisition",
+        "C-server.stop_acquisition"
+      ]
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [],
+      "scope": [],
+      "related_documents": []
+    },
+    "2": {
+      "design_approach": [],
+      "module_decomposition": [],
+      "architectural_decisions": []
+    },
+    "3": [
+      "C-acquisition.AcquisitionEngine",
+      "C-acquisition.Sample",
+      "C-api.HealthReport",
+      "C-api.StartCommand",
+      "C-api.TelemetrySample",
+      "C-processing.HealthMonitor",
+      "C-server./acquire/start",
+      "C-server./acquire/stop",
+      "C-server.get_mtbf",
+      "C-server.get_samples",
+      "C-server./health",
+      "C-server.health",
+      "C-server./mtbf",
+      "C-server./samples",
+      "C-server.start_acquisition",
+      "C-server.stop_acquisition"
+    ],
+    "4": {
+      "external_interfaces": [
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "IRS_v2.0.docx",
+          "req_ids": []
+        },
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "3. Interface Requirements",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103",
+            "IR-0104"
+          ]
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/api.proto",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/api.proto",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103"
+          ]
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        }
+      ],
+      "data_structures": [
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "3. Interface Requirements",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103",
+            "IR-0104"
+          ]
+        },
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "IRS_v2.0.docx",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/api.proto",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/api.proto",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103"
+          ]
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/ec0b5cea-6bd5-47d6-ad58-7e95b7930a98/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        }
+      ]
+    },
+    "5": [
+      {
+        "from": "TP-0001",
+        "to": "IR-0101",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "IR-0101",
+        "to": "IR-0102",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0103",
+        "to": "IR-0102",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0002",
+        "to": "IR-0102",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "IR-0102",
+        "to": "IR-0103",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0003",
+        "to": "IR-0103",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "IR-0103",
+        "to": "IR-0104",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0004",
+        "to": "IR-0104",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "C-acquisition.AcquisitionEngine",
+        "to": "REQ-0001",
+        "link_type": "implements",
+        "confidence": 0.800000011920929
+      },
+      {
+        "from": "TP-0006",
+        "to": "REQ-0001",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0002",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0007",
+        "to": "REQ-0002",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0002",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0002",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "C-processing.HealthMonitor",
+        "to": "REQ-0002",
+        "link_type": "implements",
+        "confidence": 0.800000011920929
+      },
+      {
+        "from": "TP-0011",
+        "to": "REQ-0002",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0003",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0004",
+        "to": "REQ-0003",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0003",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0007",
+        "to": "REQ-0003",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0008",
+        "to": "REQ-0004",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0003",
+        "to": "REQ-0005",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0004",
+        "to": "REQ-0005",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0005",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0002",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0009",
+        "to": "REQ-0005",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0003",
+        "to": "REQ-0006",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0006",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0006",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0010",
+        "to": "REQ-0006",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0002",
+        "to": "REQ-0007",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0007",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0012",
+        "to": "REQ-0007",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0007",
+        "to": "REQ-0008",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0008",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0013",
+        "to": "REQ-0008",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0009",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0010",
+        "to": "REQ-0009",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0014",
+        "to": "REQ-0009",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0010",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0005",
+        "to": "REQ-0011",
+        "link_type": "verifies",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "_compliance": {
+    "status": "pass",
+    "passed": true,
+    "missing_requirement_references": [],
+    "missing_sections": [],
+    "uncovered_requirements": [],
+    "referenced_ids": [
+      "IR-0101",
+      "IR-0102",
+      "IR-0103",
+      "IR-0104",
+      "REQ-0001",
+      "REQ-0002",
+      "REQ-0003",
+      "REQ-0004",
+      "REQ-0005",
+      "REQ-0006",
+      "REQ-0007",
+      "REQ-0008",
+      "REQ-0009",
+      "REQ-0010",
+      "REQ-0011"
+    ],
+    "registry_count": 45
+  }
+}

@@ -1,0 +1,969 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "DRAFT (mock, grounded on 7 retrieved chunks):\n- Interface Requirements Specification (IRS) Revision 2.0 \u2014 interface requirements for the ground segment and sensor interfaces.  [source: IRS_v2.0.docx / IRS_v2.0.docx]\n- ID | Type | Requirement IR-0101 | interface | The ground segment interface shall transmit telemetry sample envelopes as defined in api.proto (message TelemetrySample). IR-0102 | interface | The acquisition command interface shall accept a StartCommand message to begin acquisition. IR-0103 | interface | The health reporting interface shall expose an MTBF estimate as defined in api.proto (message HealthReport). IR-0104 | interface | The sensor interface shall provide a raw sample stream at the con  [source: IRS_v2.0.docx / 3. Interface Requirements]\n- Minutes of Meeting \u2014 Design Review 04 Review of the telemetry acquisition subsystem preliminary design. Rev 1.0  [source: MoM_DesignReview04.docx / MoM_DesignReview04.docx]\n- Decision: The acquisition subsystem shall use a time-tagged sample buffer for all channels. Decision: The REST interface in REQ-0005 shall be versioned from day one.  [source: MoM_DesignReview04.docx / 1. Decisions]\n- Action item: Update SysRS section 2 to clarify the REQ-0001 sampling rate. Owner: Dr. Sharma. Due: 2026-09-01. Action item: Confirm REQ-0008 authentication mechanism with the security panel. Owner: Lt. Rao. Due: 2026-09-15.  [source: MoM_DesignReview04.docx / 2. Action Items]",
+      "scope": "DRAFT (mock, grounded on 7 retrieved chunks):\n- Interface Requirements Specification (IRS) Revision 2.0 \u2014 interface requirements for the ground segment and sensor interfaces.  [source: IRS_v2.0.docx / IRS_v2.0.docx]\n- ID | Type | Requirement IR-0101 | interface | The ground segment interface shall transmit telemetry sample envelopes as defined in api.proto (message TelemetrySample). IR-0102 | interface | The acquisition command interface shall accept a StartCommand message to begin acquisition. IR-0103 | interface | The health reporting interface shall expose an MTBF estimate as defined in api.proto (message HealthReport). IR-0104 | interface | The sensor interface shall provide a raw sample stream at the con  [source: IRS_v2.0.docx / 3. Interface Requirements]\n- Minutes of Meeting \u2014 Design Review 04 Review of the telemetry acquisition subsystem preliminary design. Rev 1.0  [source: MoM_DesignReview04.docx / MoM_DesignReview04.docx]\n- Decision: The acquisition subsystem shall use a time-tagged sample buffer for all channels. Decision: The REST interface in REQ-0005 shall be versioned from day one.  [source: MoM_DesignReview04.docx / 1. Decisions]\n- Action item: Update SysRS section 2 to clarify the REQ-0001 sampling rate. Owner: Dr. Sharma. Due: 2026-09-01. Action item: Confirm REQ-0008 authentication mechanism with the security panel. Owner: Lt. Rao. Due: 2026-09-15.  [source: MoM_DesignReview04.docx / 2. Action Items]",
+      "references": [
+        {
+          "ref_id": "REQ-0005",
+          "title": "1. Decisions",
+          "source": "1. Decisions"
+        },
+        {
+          "ref_id": "IR-0101",
+          "title": "3. Interface Requirements",
+          "source": "3. Interface Requirements"
+        },
+        {
+          "ref_id": "MoM_DesignReview04.docx",
+          "title": "MoM_DesignReview04.docx",
+          "source": "MoM_DesignReview04.docx"
+        },
+        {
+          "ref_id": "IRS_v2.0.docx",
+          "title": "IRS_v2.0.docx",
+          "source": "IRS_v2.0.docx"
+        },
+        {
+          "ref_id": "REQ-0001",
+          "title": "4. Test Outcomes",
+          "source": "4. Test Outcomes"
+        },
+        {
+          "ref_id": "REQ-0006",
+          "title": "3. Requirement Changes",
+          "source": "3. Requirement Changes"
+        },
+        {
+          "ref_id": "REQ-0001",
+          "title": "2. Action Items",
+          "source": "2. Action Items"
+        }
+      ]
+    },
+    "2": {
+      "requirements": [
+        {
+          "requirement_id": "IR-0101",
+          "requirement": "| interface | The ground segment interface shall transmit telemetry sample envelopes as defined in api.proto (message TelemetrySample).",
+          "source": "irs",
+          "interface": "",
+          "direction": "",
+          "protocol": ""
+        },
+        {
+          "requirement_id": "IR-0102",
+          "requirement": "| interface | The acquisition command interface shall accept a StartCommand message to begin acquisition.",
+          "source": "irs",
+          "interface": "",
+          "direction": "",
+          "protocol": ""
+        },
+        {
+          "requirement_id": "IR-0103",
+          "requirement": "| interface | The health reporting interface shall expose an MTBF estimate as defined in api.proto (message HealthReport).",
+          "source": "irs",
+          "interface": "",
+          "direction": "",
+          "protocol": ""
+        },
+        {
+          "requirement_id": "IR-0104",
+          "requirement": "| interface | The sensor interface shall provide a raw sample stream at the configured sample rate.",
+          "source": "irs",
+          "interface": "",
+          "direction": "",
+          "protocol": ""
+        },
+        {
+          "requirement_id": "REQ-0005",
+          "requirement": "| functional | The system shall expose acquired samples through a REST interface to the ground segment.",
+          "source": "sysrs",
+          "interface": "",
+          "direction": "",
+          "protocol": ""
+        }
+      ],
+      "gaps": []
+    },
+    "3": {
+      "message_schemas": [
+        {
+          "message": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/server.py",
+          "schema_source": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/server.py",
+          "fields": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/server.py"
+        },
+        {
+          "message": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/api.proto",
+          "schema_source": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/api.proto",
+          "fields": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/api.proto"
+        },
+        {
+          "message": "3. Interface Requirements",
+          "schema_source": "3. Interface Requirements",
+          "fields": "3. Interface Requirements"
+        },
+        {
+          "message": "IRS_v2.0.docx",
+          "schema_source": "IRS_v2.0.docx",
+          "fields": "IRS_v2.0.docx"
+        },
+        {
+          "message": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/processing.py",
+          "schema_source": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/processing.py",
+          "fields": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/processing.py"
+        },
+        {
+          "message": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "schema_source": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "fields": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py"
+        },
+        {
+          "message": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "schema_source": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "fields": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py"
+        },
+        {
+          "message": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "schema_source": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "fields": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py"
+        }
+      ],
+      "encoding": "DRAFT (mock, grounded on 8 retrieved chunks):\n- point not yet implemented\")  [source: /home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/server.py / /home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/server.py]\n- syntax = \"proto3\"; package telemetry_acq; // Telemetry sample envelope (interface IR-0101). message TelemetrySample { uint32 channel = 1; double timestamp = 2; repeated double values = 3; } // Command message to start acquisition (interface IR-0102). message StartCommand { uint32 num_channels = 1; uint32 sample_rate_hz = 2; } // Health status report (interface IR-0103). message HealthReport { string status = 1; double mtbf_estimate_hours = 2; }  [source: /home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/api.proto / /home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/api.proto]\n- ID | Type | Requirement IR-0101 | interface | The ground segment interface shall transmit telemetry sample envelopes as defined in api.proto (message TelemetrySample). IR-0102 | interface | The acquisition command interface shall accept a StartCommand message to begin acquisition. IR-0103 | interface | The health reporting interface shall expose an MTBF estimate as defined in api.proto (message HealthReport). IR-0104 | interface | The sensor interface shall provide a raw sample stream at the con  [source: IRS_v2.0.docx / 3. Interface Requirements]\n- Interface Requirements Specification (IRS) Revision 2.0 \u2014 interface requirements for the ground segment and sensor interfaces.  [source: IRS_v2.0.docx / IRS_v2.0.docx]\n- \"\"\"Health monitoring for the acquisition subsystem. Supports REQ-0002 (MTBF >= 2000 h).\"\"\" from __future__ import annotations import time class HealthMonitor: \"\"\"Tracks uptime and estimates MTBF (REQ-0002).\"\"\" def __init__(self, required_mtbf_hours: float = 2000.0) -> None: self.required_mtbf_hours = required_mtbf_hours self._started_at: float | None = None self._faults = 0 def start(self) -> None: self._started_at = time.time() self._faults = 0 def record_fault(self) -> None: self._faults += 1   [source: /home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/processing.py / /home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/processing.py]"
+    },
+    "4": {
+      "rows": [
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0003",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0003",
+          "to": "REQ-0005",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0003",
+          "to": "REQ-0006",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0004",
+          "to": "REQ-0003",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0004",
+          "to": "REQ-0005",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0003",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0006",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0002",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0005",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0002",
+          "to": "REQ-0007",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0007",
+          "to": "REQ-0002",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0007",
+          "to": "REQ-0008",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0007",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0009",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0008",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0010",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0010",
+          "to": "REQ-0009",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0101",
+          "to": "IR-0102",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0102",
+          "to": "IR-0103",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0103",
+          "to": "IR-0102",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0103",
+          "to": "IR-0104",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0002",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0002",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0006",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0002",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "C-acquisition.AcquisitionEngine",
+          "to": "REQ-0001",
+          "link_type": "implements",
+          "confidence": 0.800000011920929
+        },
+        {
+          "from": "C-processing.HealthMonitor",
+          "to": "REQ-0002",
+          "link_type": "implements",
+          "confidence": 0.800000011920929
+        }
+      ],
+      "uncovered": [
+        "C-acquisition.Sample",
+        "C-api.HealthReport",
+        "C-api.StartCommand",
+        "C-api.TelemetrySample",
+        "C-server./acquire/start",
+        "C-server./acquire/stop",
+        "C-server./health",
+        "C-server./mtbf",
+        "C-server./samples",
+        "C-server.get_mtbf",
+        "C-server.get_samples",
+        "C-server.health",
+        "C-server.start_acquisition",
+        "C-server.stop_acquisition"
+      ]
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "IRS_v2.0.docx",
+          "req_ids": []
+        },
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "3. Interface Requirements",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103",
+            "IR-0104"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "MoM_DesignReview04.docx",
+          "req_ids": []
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "1. Decisions",
+          "req_ids": [
+            "REQ-0005"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "2. Action Items",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0008"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "3. Requirement Changes",
+          "req_ids": [
+            "REQ-0006",
+            "REQ-0009",
+            "REQ-0011"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "4. Test Outcomes",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0002",
+            "REQ-0005"
+          ]
+        }
+      ],
+      "scope": [
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "IRS_v2.0.docx",
+          "req_ids": []
+        },
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "3. Interface Requirements",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103",
+            "IR-0104"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "MoM_DesignReview04.docx",
+          "req_ids": []
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "1. Decisions",
+          "req_ids": [
+            "REQ-0005"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "2. Action Items",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0008"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "3. Requirement Changes",
+          "req_ids": [
+            "REQ-0006",
+            "REQ-0009",
+            "REQ-0011"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "4. Test Outcomes",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0002",
+            "REQ-0005"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "1. Decisions",
+          "req_ids": [
+            "REQ-0005"
+          ]
+        },
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "3. Interface Requirements",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103",
+            "IR-0104"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "MoM_DesignReview04.docx",
+          "req_ids": []
+        },
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "IRS_v2.0.docx",
+          "req_ids": []
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "4. Test Outcomes",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0002",
+            "REQ-0005"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "3. Requirement Changes",
+          "req_ids": [
+            "REQ-0006",
+            "REQ-0009",
+            "REQ-0011"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "2. Action Items",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0008"
+          ]
+        }
+      ]
+    },
+    "2": [
+      "IR-0101",
+      "IR-0102",
+      "IR-0103",
+      "IR-0104",
+      "REQ-0005"
+    ],
+    "3": {
+      "message_schemas": [
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/server.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/server.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/api.proto",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/api.proto",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103"
+          ]
+        },
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "3. Interface Requirements",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103",
+            "IR-0104"
+          ]
+        },
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "IRS_v2.0.docx",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/processing.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/processing.py",
+          "req_ids": [
+            "REQ-0002"
+          ]
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        }
+      ],
+      "encoding": [
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/server.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/server.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/api.proto",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/api.proto",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103"
+          ]
+        },
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "3. Interface Requirements",
+          "req_ids": [
+            "IR-0101",
+            "IR-0102",
+            "IR-0103",
+            "IR-0104"
+          ]
+        },
+        {
+          "source": "irs",
+          "source_file": "IRS_v2.0.docx",
+          "heading": "IRS_v2.0.docx",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/processing.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/processing.py",
+          "req_ids": [
+            "REQ-0002"
+          ]
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        },
+        {
+          "source": "code",
+          "source_file": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "heading": "/home/hanuai/Documents/sdlc-docgen/backend/storage/97d0dcc9-e397-4320-8418-2ea9eb03ea0c/uploads/code/telemetry_acq/acquisition.py",
+          "req_ids": []
+        }
+      ]
+    },
+    "4": [
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0003",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0003",
+        "to": "REQ-0005",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0003",
+        "to": "REQ-0006",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0004",
+        "to": "REQ-0003",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0004",
+        "to": "REQ-0005",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0003",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0006",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0002",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0005",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0002",
+        "to": "REQ-0007",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0007",
+        "to": "REQ-0002",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0007",
+        "to": "REQ-0008",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0007",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0009",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0008",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0010",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0010",
+        "to": "REQ-0009",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0101",
+        "to": "IR-0102",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0102",
+        "to": "IR-0103",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0103",
+        "to": "IR-0102",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0103",
+        "to": "IR-0104",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0002",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0002",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0006",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0002",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "C-acquisition.AcquisitionEngine",
+        "to": "REQ-0001",
+        "link_type": "implements",
+        "confidence": 0.800000011920929
+      },
+      {
+        "from": "C-processing.HealthMonitor",
+        "to": "REQ-0002",
+        "link_type": "implements",
+        "confidence": 0.800000011920929
+      }
+    ]
+  },
+  "_compliance": {
+    "status": "pass",
+    "passed": true,
+    "missing_requirement_references": [],
+    "missing_sections": [],
+    "uncovered_requirements": [],
+    "referenced_ids": [
+      "IR-0101",
+      "IR-0102",
+      "IR-0103",
+      "IR-0104",
+      "REQ-0001",
+      "REQ-0002",
+      "REQ-0003",
+      "REQ-0004",
+      "REQ-0005",
+      "REQ-0006",
+      "REQ-0007",
+      "REQ-0008",
+      "REQ-0009",
+      "REQ-0010",
+      "REQ-0011"
+    ],
+    "registry_count": 31
+  }
+}

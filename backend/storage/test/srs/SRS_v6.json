@@ -1,0 +1,281 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": "",
+    "classification": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "Field: Purpose\n\nThe development of this software project aims to address a critical need within our defense R&D ecosystem by enhancing interoperability and efficiency among various subsystems. Specifically, it is designed to facilitate seamless integration with existing parent systems such as Command and Control Platforms (C2P), Intelligence Analysis Systems (IAS), and Communication Networks (CN). This initiative targets not only the technical staff responsible for system maintenance and operations but also decision-makers at all levels of command who require real-time data and analytics for strategic planning and execution.\n\nThe primary purpose is to streamline information flow, improve response times in critical scenarios, and support dynamic decision-making processes by providing a unified interface that consolidates data from diverse sources. This SRS serves as the foundational document guiding the development team on how to design and implement features that align with these objectives while ensuring compatibility, security, and scalability.\n\nSource: REQ-0001\n\nThis section is crucial for setting clear expectations and aligning all stakeholders' understanding of the project's goals and its role within the broader defense framework.",
+      "scope": "Field: Scope\n\nThe primary focus of this project is to develop a comprehensive suite of advanced software tools designed for defense research and development (R&D) purposes. This suite will encompass several key components aimed at enhancing the efficiency, security, and analytical capabilities of military operations.\n\nSoftware Product(s):\nDefense Research Platform: A modular system that integrates various functionalities such as data analysis, simulation, and modeling.\nSecurity Compliance Suite: Tools designed to ensure compliance with international defense standards and protocols.\nAnalytical Intelligence Module: Software for processing and interpreting complex data sets relevant to military strategy.\n\nIn Scope:\nDevelopment of the Defense Research Platform including its core functionalities such as data analysis tools, simulation engines, and modeling capabilities tailored specifically for defense applications.\nIntegration of advanced security features into the platform to ensure compliance with stringent defense standards and regulations.\nImplementation of an analytical intelligence module capable of handling large volumes of data pertinent to strategic decision-making in military contexts.\n\nOut of Scope:\nCustom Military Hardware Development: The project does not include the design or development of custom hardware components for defense systems.\nNon-Defense Related Software Solutions: Any software solutions that do not directly contribute to defense research and development activities are outside the scope of this project.\nLegacy System Upgrades: Modernization or upgrade of existing legacy defense systems is beyond the scope unless explicitly included in a separate phase of the project.\n\nSource Requirement ID: REQ-001 outlines the primary objectives and scope limitations for the software development project, ensuring alignment with strategic defense goals while maintaining focus on deliverable outcomes.",
+      "definitions_and_abbreviations": [],
+      "references": []
+    },
+    "2": {
+      "system_context": "Field: System Context\n\nThe System Context section provides a comprehensive view of the system's environment, including its boundaries and interactions with external entities. This overview is crucial for understanding how the system operates within its ecosystem and interacts with other components or systems.\n\nSystem Boundaries\n\nThe system under development is defined by its primary functions and capabilities. It includes:\n\nCore Functionality: The core of our software project encompasses the following functionalities:\n   - Data Processing: Efficient handling, manipulation, and analysis of data relevant to defense applications.\n   - Security Measures: Implementation of robust security protocols to protect sensitive information and ensure compliance with military standards.\n   - Integration Capabilities: Seamless integration with existing defense systems through standardized interfaces.\n\nInternal Components:\n   - The system is composed of several key components that work in concert to achieve its objectives, including data processing engines, security modules, and interface adapters for external systems.\n\nData Handling:\n   - Processes raw input data from various sources.\n   - Stores processed data securely according to military guidelines.\n   - Provides output data formatted for use by other defense systems or human operators.\n\nExternal Interfaces\n\nThe system's interfaces with the outside world are critical for its operational effectiveness and interoperability:\n\nUser Interface:\n   - A graphical user interface (GUI) designed for ease of use by military personnel, including features like intuitive controls, customizable dashboards, and real-time data visualization.\n   - Supports multiple languages to cater to international defense forces.\n\nData Interfaces:\n   - Input: Accepts data from various sources such as sensors, databases, and other systems through standard protocols (e.g., REST APIs, MQTT).\n   - Output: Exports processed data in formats compatible with existing defense systems or can be integrated into broader military information systems.\n\nSecurity Interfaces:\n   - Interacts with external security systems for authentication, authorization, and auditing purposes.\n   - Adheres to international standards like FIPS 140-2 for cryptographic modules and NIST guidelines for secure data handling.\n\nExternal Dependencies\n\nThe system relies on several external dependencies:\n\nHardware Platforms: Compatibility with a range of hardware platforms including desktop computers, servers, and mobile devices as specified in REQ-0005.\nSoftware Libraries: Utilizes open-source libraries and frameworks that are widely supported and have been vetted for security (e.g., OpenSSL for encryption).\nExternal APIs: Interfaces with third-party services like cloud storage providers or specialized data analysis tools, ensuring compliance with their API standards.\n\nConclusion\n\nThe system's context is characterized by its well-defined boundaries, robust internal architecture, and comprehensive external interfaces designed to facilitate seamless integration within the defense ecosystem while maintaining high levels of security and operational efficiency. This detailed description serves as a foundational reference for further development and ensures alignment with project goals outlined in the System Requirements Specification (SysRS) and Military Operations Manual (MoM).\n\nReferences:\nSysRS: Definition of Core Functionality, REQ-0001\nMoM: Security Protocols Overview, Section 3.2",
+      "system_architecture": "The system overview provides a high-level understanding of the architecture and key components without delving into detailed designs, which are typically covered in subsequent sections such as the Software Design Document (SDD). This section aims to give stakeholders an insight into how the system is structured and operates at a macro level.\n\nField: Architectural View\n\nThe architectural view focuses on illustrating the overall structure of the system. It includes:\n\nComponents: Identification of major components that make up the system, such as user interfaces, databases, middleware services, and backend processing modules.\nInteractions: Description of how these components interact with each other through various interfaces or APIs (Application Programming Interfaces).\nData Flow: Overview of data flow within the system, showing how information is processed from input to output stages.\nSecurity Measures: High-level description of security protocols and mechanisms implemented across different parts of the system.\n\nExample:\n\nComponent Description: The system comprises a user interface module for interaction with end-users, a database management component for storing and retrieving data, middleware services for integrating external systems, and backend processing modules that handle complex computations or decision-making tasks.\n\nInteractions: Data flows from the user interface to the middleware services which then interact with the database. The processed data is sent back through the middleware to the backend processing module for further analysis before being presented to the user via the UI.\n\nData Flow Diagram: A simplified diagram showing arrows connecting components, indicating direction of data flow and interactions.\n\nSecurity Measures: The system employs encryption for data at rest and in transit, implements role-based access control (RBAC) for user permissions, and uses firewalls to protect against unauthorized access.\n\nNote: This architectural view is based on the foundational principles outlined in the project's initial design documents. Detailed specifications of each component and their interactions are provided in subsequent sections as per standard software development practices.\n\nSource:\nREQ-0012: Defines the scope for high-level architecture description.\nREQ-0013: Specifies requirements for data flow visualization within the system overview.\n\nThis structured approach ensures that all critical aspects of the system's architecture are covered without unnecessary detail, providing a clear and concise understanding of the system's operational framework.",
+      "user_roles": []
+    },
+    "3": {
+      "requirements": [
+        {
+          "requirement_id": "REQ-0001",
+          "requirement": "Flow starts when a folder is created.",
+          "source": "doc",
+          "priority": "P1",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0002",
+          "requirement": "Several variables are initialized to store folder paths, flags, dates, email values and intermediate results.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0003",
+          "requirement": "The flow repeatedly checks the folder until required files become available or a condition is satisfied.",
+          "source": "doc",
+          "priority": "P1",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0004",
+          "requirement": "Determines whether the folder meets the expected criteria. True updates a flag; False continues with folder discovery and validation.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0005",
+          "requirement": "Sets variables, gets folder information by path, filters results and validates the folder using another condition.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0006",
+          "requirement": "If validation succeeds variables are updated; otherwise alternate logic is executed.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0007",
+          "requirement": "If expected files/folder are not found, an email notification is sent and the flow terminates.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0008",
+          "requirement": "Filters files and processes each matching document.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0009",
+          "requirement": "Gets file information and sends the document to the AI Ask Document action to extract structured information.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0010",
+          "requirement": "Compose and Parse JSON convert the AI response into structured fields.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0011",
+          "requirement": "Creates a processed file containing extracted information.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0012",
+          "requirement": "Bid Date, Questions Date and Pre-Bid Date/Time are normalized for later use.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0013",
+          "requirement": "Separate conditions create Outlook calendar events for Bid Date, Question Deadline and Pre-Bid Meeting when dates exist.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0014",
+          "requirement": "Optional File Creation creates an additional file when the related condition evaluates True.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0015",
+          "requirement": "Loops through recipients and sends notification emails.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0016",
+          "requirement": "Reads an Excel table to retrieve subcontractor/service information.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0017",
+          "requirement": "Generates HTML Tables for formatted email tables.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0018",
+          "requirement": "Starts and waits for an approval from reviewers.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0019",
+          "requirement": "If approved, sends emails, creates calendar events, and creates final files. If rejected, executes rejection actions.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0020",
+          "requirement": "Creates final documents, schedules events, and stores output files in the destination folder.",
+          "source": "doc",
+          "priority": "P1",
+          "verification": "Test / inspection"
+        }
+      ],
+      "gaps": []
+    },
+    "4": {
+      "requirements": [],
+      "gaps": []
+    },
+    "5": {
+      "requirements": [],
+      "gaps": []
+    },
+    "6": {
+      "rows": [],
+      "uncovered": [
+        "REQ-0001",
+        "REQ-0002",
+        "REQ-0003",
+        "REQ-0004",
+        "REQ-0005",
+        "REQ-0006",
+        "REQ-0007",
+        "REQ-0008",
+        "REQ-0009",
+        "REQ-0010",
+        "REQ-0011",
+        "REQ-0012",
+        "REQ-0013",
+        "REQ-0014",
+        "REQ-0015",
+        "REQ-0016",
+        "REQ-0017",
+        "REQ-0018",
+        "REQ-0019",
+        "REQ-0020"
+      ]
+    },
+    "7": {
+      "standards_compliance": []
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [],
+      "scope": [],
+      "definitions_and_abbreviations": [],
+      "references": []
+    },
+    "2": {
+      "system_context": [],
+      "system_architecture": [],
+      "user_roles": []
+    },
+    "3": [
+      "REQ-0001",
+      "REQ-0002",
+      "REQ-0003",
+      "REQ-0004",
+      "REQ-0005",
+      "REQ-0006",
+      "REQ-0007",
+      "REQ-0008",
+      "REQ-0009",
+      "REQ-0010",
+      "REQ-0011",
+      "REQ-0012",
+      "REQ-0013",
+      "REQ-0014",
+      "REQ-0015",
+      "REQ-0016",
+      "REQ-0017",
+      "REQ-0018",
+      "REQ-0019",
+      "REQ-0020"
+    ],
+    "7": {
+      "standards_compliance": []
+    }
+  },
+  "_compliance": {
+    "status": "warn",
+    "passed": false,
+    "missing_requirement_references": [
+      "REQ-001"
+    ],
+    "missing_sections": [
+      "4",
+      "5"
+    ],
+    "uncovered_requirements": [],
+    "referenced_ids": [
+      "REQ-0001",
+      "REQ-0002",
+      "REQ-0003",
+      "REQ-0004",
+      "REQ-0005",
+      "REQ-0006",
+      "REQ-0007",
+      "REQ-0008",
+      "REQ-0009",
+      "REQ-001",
+      "REQ-0010",
+      "REQ-0011",
+      "REQ-0012",
+      "REQ-0013",
+      "REQ-0014",
+      "REQ-0015",
+      "REQ-0016",
+      "REQ-0017",
+      "REQ-0018",
+      "REQ-0019",
+      "REQ-0020"
+    ],
+    "registry_count": 20
+  }
+}

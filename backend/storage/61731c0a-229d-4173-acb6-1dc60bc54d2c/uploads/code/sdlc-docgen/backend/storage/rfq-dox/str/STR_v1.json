@@ -1,0 +1,242 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "DRAFT (mock, grounded on 8 retrieved chunks):\n- retrieved): please review and expand.  [source: SRS.generated / 1 Introduction] - DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview] DRAFT (mock, grounded on 2 retrieved chunks): - DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction]  [source: STP.generated / 1 Introduction]\n- retrieved): please review and expand.  [source: SRS.generated / 1 Introduction] - DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview]  [source: STP.generated / 1 Introduction]\n- DRAFT (mock, grounded on 2 retrieved chunks): - DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction] - DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview] DRAFT (mock, grounded on 2 retrieved chunks): - DRAFT (mock, no grounding chunk  [source: STP.generated / 1 Introduction]\n- System Overview]  [source: STP.generated / 1 Introduction]\n- tem Overview]  [source: STP.generated / 1 Introduction]",
+      "scope": "DRAFT (mock, grounded on 8 retrieved chunks):\n- retrieved): please review and expand.  [source: SRS.generated / 1 Introduction] - DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview] DRAFT (mock, grounded on 2 retrieved chunks): - DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction]  [source: STP.generated / 1 Introduction]\n- retrieved): please review and expand.  [source: SRS.generated / 1 Introduction] - DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview]  [source: STP.generated / 1 Introduction]\n- DRAFT (mock, grounded on 2 retrieved chunks): - DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction] - DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview] DRAFT (mock, grounded on 2 retrieved chunks): - DRAFT (mock, no grounding chunk  [source: STP.generated / 1 Introduction]\n- System Overview]  [source: STP.generated / 1 Introduction]\n- tem Overview]  [source: STP.generated / 1 Introduction]",
+      "references": [
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        }
+      ]
+    },
+    "2": {
+      "requirements": [],
+      "gaps": []
+    },
+    "3": {
+      "defect_list": [],
+      "analysis": "DRAFT (mock, no grounding chunks retrieved): please review and expand."
+    },
+    "4": {
+      "rows": [],
+      "uncovered": []
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        }
+      ],
+      "scope": [
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        }
+      ],
+      "references": [
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        }
+      ]
+    },
+    "3": {
+      "defect_list": [],
+      "analysis": []
+    }
+  },
+  "_compliance": {
+    "status": "pass",
+    "passed": false,
+    "missing_requirement_references": [],
+    "missing_sections": [
+      "2",
+      "4"
+    ],
+    "uncovered_requirements": [],
+    "referenced_ids": [],
+    "registry_count": 0
+  }
+}

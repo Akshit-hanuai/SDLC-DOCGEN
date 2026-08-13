@@ -1,0 +1,126 @@
+{
+  "project_id": "59a35f88-3298-4700-bf44-1e0ce35e97ae",
+  "requirements": {
+    "total": 53,
+    "real": 19
+  },
+  "traceability": {
+    "links": 39,
+    "dangling": 0,
+    "completeness": 1.0
+  },
+  "documents": {
+    "SRS": {
+      "version": 2,
+      "requirement_coverage": 1.0,
+      "covered": 19,
+      "total_requirements": 19,
+      "template_conformance": 1.0,
+      "sections_present": 7,
+      "sections_expected": 7,
+      "compliance_status": "pass"
+    },
+    "SDD": {
+      "version": 1,
+      "requirement_coverage": 1.0,
+      "covered": 19,
+      "total_requirements": 19,
+      "template_conformance": 1.0,
+      "sections_present": 5,
+      "sections_expected": 5,
+      "compliance_status": "pass"
+    },
+    "ICD": {
+      "version": 1,
+      "requirement_coverage": 1.0,
+      "covered": 19,
+      "total_requirements": 19,
+      "template_conformance": 1.0,
+      "sections_present": 4,
+      "sections_expected": 4,
+      "compliance_status": "pass"
+    },
+    "STP": {
+      "version": 1,
+      "requirement_coverage": 1.0,
+      "covered": 19,
+      "total_requirements": 19,
+      "template_conformance": 1.0,
+      "sections_present": 4,
+      "sections_expected": 4,
+      "compliance_status": "pass"
+    },
+    "STR": {
+      "version": 1,
+      "requirement_coverage": 1.0,
+      "covered": 19,
+      "total_requirements": 19,
+      "template_conformance": 1.0,
+      "sections_present": 4,
+      "sections_expected": 4,
+      "compliance_status": "pass"
+    }
+  },
+  "cross_document_consistency": {
+    "ICD_vs_SDD": {
+      "overlap": 19,
+      "jaccard": 1.0
+    },
+    "ICD_vs_SRS": {
+      "overlap": 19,
+      "jaccard": 1.0
+    },
+    "ICD_vs_STP": {
+      "overlap": 19,
+      "jaccard": 1.0
+    },
+    "ICD_vs_STR": {
+      "overlap": 19,
+      "jaccard": 1.0
+    },
+    "SDD_vs_SRS": {
+      "overlap": 19,
+      "jaccard": 1.0
+    },
+    "SDD_vs_STP": {
+      "overlap": 19,
+      "jaccard": 1.0
+    },
+    "SDD_vs_STR": {
+      "overlap": 19,
+      "jaccard": 1.0
+    },
+    "SRS_vs_STP": {
+      "overlap": 19,
+      "jaccard": 1.0
+    },
+    "SRS_vs_STR": {
+      "overlap": 19,
+      "jaccard": 1.0
+    },
+    "STP_vs_STR": {
+      "overlap": 19,
+      "jaccard": 1.0
+    }
+  },
+  "similarity": {
+    "SDD": {
+      "rouge1": 0.754,
+      "rouge2": 0.524,
+      "rougeL": 0.315,
+      "bertscore_like_f1": 0.759
+    },
+    "STP": {
+      "rouge1": 0.545,
+      "rouge2": 0.272,
+      "rougeL": 0.246,
+      "bertscore_like_f1": 0.527
+    },
+    "STR": {
+      "rouge1": 0.539,
+      "rouge2": 0.388,
+      "rougeL": 0.449,
+      "bertscore_like_f1": 0.701
+    }
+  }
+}

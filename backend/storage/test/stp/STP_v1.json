@@ -1,0 +1,242 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "DRAFT (mock, grounded on 2 retrieved chunks):\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction]\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview]",
+      "scope": "DRAFT (mock, grounded on 2 retrieved chunks):\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction]\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview]",
+      "test_strategy": "DRAFT (mock, grounded on 2 retrieved chunks):\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction]\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview]"
+    },
+    "2": {
+      "test_items": "DRAFT (mock, grounded on 8 retrieved chunks):\n- and.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]\n- and expand.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]\n- and expand.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]\n- w and expand.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]\n- ew and expand.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]",
+      "features_to_test": "DRAFT (mock, grounded on 8 retrieved chunks):\n- and.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]\n- and expand.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]\n- and expand.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]\n- w and expand.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]\n- ew and expand.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]",
+      "features_not_tested": "DRAFT (mock, grounded on 8 retrieved chunks):\n- and.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]\n- and expand.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]\n- and expand.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]\n- w and expand.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]\n- ew and expand.  [source: SRS.generated / 2 System Overview]  [source: SDD.generated / 2 System Design Overview]"
+    },
+    "3": {
+      "requirements": [],
+      "gaps": []
+    },
+    "4": {
+      "rows": [],
+      "uncovered": []
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        }
+      ],
+      "scope": [
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        }
+      ],
+      "test_strategy": [
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        }
+      ]
+    },
+    "2": {
+      "test_items": [
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        }
+      ],
+      "features_to_test": [
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        }
+      ],
+      "features_not_tested": [
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        },
+        {
+          "source": "sdd",
+          "source_file": "SDD.generated",
+          "heading": "2 System Design Overview",
+          "req_ids": []
+        }
+      ]
+    }
+  },
+  "_compliance": {
+    "status": "pass",
+    "passed": false,
+    "missing_requirement_references": [],
+    "missing_sections": [
+      "3",
+      "4"
+    ],
+    "uncovered_requirements": [],
+    "referenced_ids": [],
+    "registry_count": 0
+  }
+}

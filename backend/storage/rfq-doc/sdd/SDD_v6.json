@@ -1,0 +1,253 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": "",
+    "classification": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "DRAFT (mock, grounded on 8 retrieved chunks):\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction]\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview]\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction]\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview]\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction]",
+      "scope": "DRAFT (mock, grounded on 8 retrieved chunks):\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction]\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview]\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction]\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 2 System Overview]\n- DRAFT (mock, no grounding chunks retrieved): please review and expand. DRAFT (mock, no grounding chunks retrieved): please review and expand.  [source: SRS.generated / 1 Introduction]",
+      "related_documents": [
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "2 System Overview",
+          "title": "2 System Overview",
+          "source": "2 System Overview"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "2 System Overview",
+          "title": "2 System Overview",
+          "source": "2 System Overview"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "2 System Overview",
+          "title": "2 System Overview",
+          "source": "2 System Overview"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "2 System Overview",
+          "title": "2 System Overview",
+          "source": "2 System Overview"
+        }
+      ]
+    },
+    "2": {
+      "design_approach": "DRAFT (mock, no grounding chunks retrieved): please review and expand.",
+      "module_decomposition": [],
+      "architectural_decisions": "DRAFT (mock, no grounding chunks retrieved): please review and expand."
+    },
+    "3": {
+      "requirements": [],
+      "gaps": []
+    },
+    "4": {
+      "external_interfaces": [],
+      "data_structures": "DRAFT (mock, no grounding chunks retrieved): please review and expand."
+    },
+    "5": {
+      "rows": [],
+      "uncovered": []
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        }
+      ],
+      "scope": [
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        }
+      ],
+      "related_documents": [
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "srs",
+          "source_file": "SRS.generated",
+          "heading": "2 System Overview",
+          "req_ids": []
+        }
+      ]
+    },
+    "2": {
+      "design_approach": [],
+      "module_decomposition": [],
+      "architectural_decisions": []
+    },
+    "4": {
+      "external_interfaces": [],
+      "data_structures": []
+    }
+  },
+  "_compliance": {
+    "status": "pass",
+    "passed": false,
+    "missing_requirement_references": [],
+    "missing_sections": [
+      "3",
+      "5"
+    ],
+    "uncovered_requirements": [],
+    "referenced_ids": [],
+    "registry_count": 0
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "passed": false,
+  "missing_requirement_references": [],
+  "missing_sections": [
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
+  "uncovered_requirements": [],
+  "referenced_ids": [],
+  "registry_count": 0
+}

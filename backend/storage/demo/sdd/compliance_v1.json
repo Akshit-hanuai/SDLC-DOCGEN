@@ -1,0 +1,23 @@
+{
+  "status": "warn",
+  "passed": false,
+  "missing_requirement_references": [
+    "REQ-0005",
+    "REQ-0006",
+    "REQ-0007",
+    "REQ-0008"
+  ],
+  "missing_sections": [],
+  "uncovered_requirements": [],
+  "referenced_ids": [
+    "REQ-0001",
+    "REQ-0002",
+    "REQ-0003",
+    "REQ-0004",
+    "REQ-0005",
+    "REQ-0006",
+    "REQ-0007",
+    "REQ-0008"
+  ],
+  "registry_count": 294
+}

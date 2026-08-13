@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package telemetry_acq;
+
+// Telemetry sample envelope (interface IR-0101).
+message TelemetrySample {
+  uint32 channel = 1;
+  double timestamp = 2;
+  repeated double values = 3;
+}
+
+// Command message to start acquisition (interface IR-0102).
+message StartCommand {
+  uint32 num_channels = 1;
+  uint32 sample_rate_hz = 2;
+}
+
+// Health status report (interface IR-0103).
+message HealthReport {
+  string status = 1;
+  double mtbf_estimate_hours = 2;
+}

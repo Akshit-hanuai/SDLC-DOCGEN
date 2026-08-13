@@ -1,0 +1,1179 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "DRAFT (mock, grounded on 8 retrieved chunks):\n- irements 2. Requirements / 2.2 Non-Fun  [source: SRS.generated / 1 Introduction] - s for the telemetry acquisition subsystem.  [source: SysRS_v3.1.docx / 1. Scope] - ID | Type | Requirement REQ-0001 | functional | The system shall acquire telemetry data from at least 3 sensor channels simultaneously. REQ-0003 | functional | The system shall timestamp every acquired sample with a system time reference accurate to +/- 1 ms. REQ-0004 | functional | The system shall buffer at least 10000 samples per  [source: STP.generated / 1 Introduction]\n- ional Requirements 1. Scope 1. Scope 1  [source: SRS.generated / 1 Introduction] - e  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] - t | The system shall operate within a 28 V DC power envelope not exceeding 45 W.  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] - | The system shall operate within a 28 V DC power envelope not exceeding 45 W.  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] 1. Scope 1. Sc  [source: STP.generated / 1 Introduction]\n- refines REQ-0003 by requiring bounded  [source: SRS.generated / 1 Introduction] - e  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] - t | The system shall operate within a 28 V DC power envelope not exceeding 45 W.  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] - | The system shall operate within a 28 V DC power envelope not exceeding 45 W.  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] DRAFT (mock, gr  [source: STP.generated / 1 Introduction]\n- : Lt. Rao. Due: 2026-09-15.  [source: MoM_DesignReview04.docx / 2. Action Items] - Requirement change: REQ-0006 is modified to require structured JSON logging output. Requirement change: A new requirement REQ-0011 is added to require automatic fault recovery within 30 seconds, in addition to REQ-0009.  [source: MoM_DesignReview04.docx / 3. Requirement Changes] - REQ-0001: PASS \u2014 all 3 channels acquired during the hardware-in-loop demonstration. REQ-0005: FAIL \u2014 sample retrieval endpoint did not   [source: STP.generated / 1 Introduction]\n- e: SRS.generated / 1 Introduction] DRAFT (mock, grounded on 8 retrieved chunks): - e  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] - System Requirements Specification (SysRS) Revision 3.1 \u2014 baseline for pilot-project-alpha.  [source: SysRS_v3.1.docx / SysRS_v3.1.docx] - system shall operate within a 28 V DC power envelope not exceeding 45 W.  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] - e system shall operate within a 28 V DC po  [source: STP.generated / 1 Introduction]",
+      "scope": "DRAFT (mock, grounded on 8 retrieved chunks):\n- ional Requirements 1. Scope 1. Scope 1  [source: SRS.generated / 1 Introduction] - e  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] - t | The system shall operate within a 28 V DC power envelope not exceeding 45 W.  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] - | The system shall operate within a 28 V DC power envelope not exceeding 45 W.  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] 1. Scope 1. Sc  [source: STP.generated / 1 Introduction]\n- irements 2. Requirements / 2.2 Non-Fun  [source: SRS.generated / 1 Introduction] - s for the telemetry acquisition subsystem.  [source: SysRS_v3.1.docx / 1. Scope] - ID | Type | Requirement REQ-0001 | functional | The system shall acquire telemetry data from at least 3 sensor channels simultaneously. REQ-0003 | functional | The system shall timestamp every acquired sample with a system time reference accurate to +/- 1 ms. REQ-0004 | functional | The system shall buffer at least 10000 samples per  [source: STP.generated / 1 Introduction]\n- refines REQ-0003 by requiring bounded  [source: SRS.generated / 1 Introduction] - e  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] - t | The system shall operate within a 28 V DC power envelope not exceeding 45 W.  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] - | The system shall operate within a 28 V DC power envelope not exceeding 45 W.  [source: SysRS_v3.1.docx / 2. Requirements / 2.2 Non-Functional Requirements] DRAFT (mock, gr  [source: STP.generated / 1 Introduction]\n- _v3.1.docx / 2. Requirements / 2.2   [source: SRS.generated / 2 System Overview] - .2 Non-Functional Requirements 2. Requirements / 2.2 Non-Functional Requirements 2. Requirements / 2.2 Non-Functional Requirements 2. Requirements / 2.2 Non-Functional Requirements 2. Requirements / 2.2 Non-Functional Requirements 2. Requirements / 2.2 Non-Functional Requirements 2. Requirements / 2.2 Non-Functional Requirements 2. Requirements / 2.2 Non-Functional Requirements 2. Requirements / 2.2 Non-Functional  [source: STP.generated / 1 Introduction]\n- : Lt. Rao. Due: 2026-09-15.  [source: MoM_DesignReview04.docx / 2. Action Items] - Requirement change: REQ-0006 is modified to require structured JSON logging output. Requirement change: A new requirement REQ-0011 is added to require automatic fault recovery within 30 seconds, in addition to REQ-0009.  [source: MoM_DesignReview04.docx / 3. Requirement Changes] - REQ-0001: PASS \u2014 all 3 channels acquired during the hardware-in-loop demonstration. REQ-0005: FAIL \u2014 sample retrieval endpoint did not   [source: STP.generated / 1 Introduction]",
+      "references": [
+        {
+          "ref_id": "REQ-0001",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "REQ-0003",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "REQ-0001",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        },
+        {
+          "ref_id": "MoM_DesignReview04.docx",
+          "title": "MoM_DesignReview04.docx",
+          "source": "MoM_DesignReview04.docx"
+        },
+        {
+          "ref_id": "1 Introduction",
+          "title": "1 Introduction",
+          "source": "1 Introduction"
+        }
+      ]
+    },
+    "2": {
+      "requirements": [
+        {
+          "test_id": "TP-0001",
+          "title": "Verify REQ-0001",
+          "status": "PASS",
+          "notes": "Result recorded in MoM for REQ-0001"
+        },
+        {
+          "test_id": "TP-0002",
+          "title": "Verify REQ-0003",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0003",
+          "title": "Verify REQ-0004",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0004",
+          "title": "Verify REQ-0005",
+          "status": "FAIL",
+          "notes": "Result recorded in MoM for REQ-0005"
+        },
+        {
+          "test_id": "TP-0005",
+          "title": "Verify REQ-0006",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0006",
+          "title": "Verify REQ-0002",
+          "status": "PASS",
+          "notes": "Result recorded in MoM for REQ-0002"
+        },
+        {
+          "test_id": "TP-0007",
+          "title": "Verify REQ-0007",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0008",
+          "title": "Verify REQ-0008",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0009",
+          "title": "Verify REQ-0009",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0010",
+          "title": "Verify IR-0101",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0011",
+          "title": "Verify IR-0102",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0012",
+          "title": "Verify IR-0103",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0013",
+          "title": "Verify IR-0104",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0014",
+          "title": "Verify REQ-0011",
+          "status": "UNTESTED",
+          "notes": ""
+        }
+      ],
+      "gaps": [
+        "TP-0001",
+        "TP-0002",
+        "TP-0003",
+        "TP-0004",
+        "TP-0005",
+        "TP-0006",
+        "TP-0007",
+        "TP-0008",
+        "TP-0009",
+        "TP-0010",
+        "TP-0011",
+        "TP-0012",
+        "TP-0013",
+        "TP-0014"
+      ]
+    },
+    "3": {
+      "defect_list": [
+        {
+          "defect_id": "1. Decisions",
+          "description": "1. Decisions",
+          "severity": "1. Decisions",
+          "status": "1. Decisions"
+        },
+        {
+          "defect_id": "2. Action Items",
+          "description": "2. Action Items",
+          "severity": "2. Action Items",
+          "status": "2. Action Items"
+        },
+        {
+          "defect_id": "3. Requirement Changes",
+          "description": "3. Requirement Changes",
+          "severity": "3. Requirement Changes",
+          "status": "3. Requirement Changes"
+        },
+        {
+          "defect_id": "4. Test Outcomes",
+          "description": "4. Test Outcomes",
+          "severity": "4. Test Outcomes",
+          "status": "4. Test Outcomes"
+        },
+        {
+          "defect_id": "MoM_DesignReview04.docx",
+          "description": "MoM_DesignReview04.docx",
+          "severity": "MoM_DesignReview04.docx",
+          "status": "MoM_DesignReview04.docx"
+        }
+      ],
+      "analysis": "DRAFT (mock, grounded on 5 retrieved chunks):\n- Minutes of Meeting \u2014 Design Review 04 Review of the telemetry acquisition subsystem preliminary design. Rev 1.0  [source: MoM_DesignReview04.docx / MoM_DesignReview04.docx]\n- Decision: The acquisition subsystem shall use a time-tagged sample buffer for all channels. Decision: The REST interface in REQ-0005 shall be versioned from day one.  [source: MoM_DesignReview04.docx / 1. Decisions]\n- Action item: Update SysRS section 2 to clarify the REQ-0001 sampling rate. Owner: Dr. Sharma. Due: 2026-09-01. Action item: Confirm REQ-0008 authentication mechanism with the security panel. Owner: Lt. Rao. Due: 2026-09-15.  [source: MoM_DesignReview04.docx / 2. Action Items]\n- Requirement change: REQ-0006 is modified to require structured JSON logging output. Requirement change: A new requirement REQ-0011 is added to require automatic fault recovery within 30 seconds, in addition to REQ-0009.  [source: MoM_DesignReview04.docx / 3. Requirement Changes]\n- REQ-0001: PASS \u2014 all 3 channels acquired during the hardware-in-loop demonstration. REQ-0005: FAIL \u2014 sample retrieval endpoint did not meet latency budget during load test. REQ-0002: PASS \u2014 MTBF estimate recorded above 2000 hours on the reference platform.  [source: MoM_DesignReview04.docx / 4. Test Outcomes]"
+    },
+    "4": {
+      "rows": [
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0003",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0003",
+          "to": "REQ-0005",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0003",
+          "to": "REQ-0006",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0004",
+          "to": "REQ-0003",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0004",
+          "to": "REQ-0005",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0003",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0006",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0002",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0005",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0002",
+          "to": "REQ-0007",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0007",
+          "to": "REQ-0002",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0007",
+          "to": "REQ-0008",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0007",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0009",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0008",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0010",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0010",
+          "to": "REQ-0009",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0101",
+          "to": "IR-0102",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0102",
+          "to": "IR-0103",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0103",
+          "to": "IR-0102",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0103",
+          "to": "IR-0104",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0002",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0002",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0006",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0002",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "C-acquisition.AcquisitionEngine",
+          "to": "REQ-0001",
+          "link_type": "implements",
+          "confidence": 0.800000011920929
+        },
+        {
+          "from": "C-processing.HealthMonitor",
+          "to": "REQ-0002",
+          "link_type": "implements",
+          "confidence": 0.800000011920929
+        },
+        {
+          "from": "TP-0001",
+          "to": "REQ-0001",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0002",
+          "to": "REQ-0003",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0003",
+          "to": "REQ-0004",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0004",
+          "to": "REQ-0005",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0005",
+          "to": "REQ-0006",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0006",
+          "to": "REQ-0002",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0007",
+          "to": "REQ-0007",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0008",
+          "to": "REQ-0008",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0009",
+          "to": "REQ-0009",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0010",
+          "to": "IR-0101",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0011",
+          "to": "IR-0102",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0012",
+          "to": "IR-0103",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0013",
+          "to": "IR-0104",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0014",
+          "to": "REQ-0011",
+          "link_type": "verifies",
+          "confidence": 1.0
+        }
+      ],
+      "uncovered": [
+        "C-acquisition.Sample",
+        "C-api.HealthReport",
+        "C-api.StartCommand",
+        "C-api.TelemetrySample",
+        "C-server./acquire/start",
+        "C-server./acquire/stop",
+        "C-server./health",
+        "C-server./mtbf",
+        "C-server./samples",
+        "C-server.get_mtbf",
+        "C-server.get_samples",
+        "C-server.health",
+        "C-server.start_acquisition",
+        "C-server.stop_acquisition"
+      ]
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0003",
+            "REQ-0004"
+          ]
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": [
+            "REQ-0003"
+          ]
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0002",
+            "REQ-0005",
+            "REQ-0006",
+            "REQ-0009",
+            "REQ-0011"
+          ]
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0005",
+            "REQ-0008"
+          ]
+        }
+      ],
+      "scope": [
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0003",
+            "REQ-0004"
+          ]
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": [
+            "REQ-0003"
+          ]
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0002",
+            "REQ-0005",
+            "REQ-0006",
+            "REQ-0009",
+            "REQ-0011"
+          ]
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0005",
+            "REQ-0008"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0003",
+            "REQ-0004"
+          ]
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": [
+            "REQ-0003"
+          ]
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0002",
+            "REQ-0005",
+            "REQ-0006",
+            "REQ-0009",
+            "REQ-0011"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "MoM_DesignReview04.docx",
+          "req_ids": []
+        },
+        {
+          "source": "stp",
+          "source_file": "STP.generated",
+          "heading": "1 Introduction",
+          "req_ids": []
+        }
+      ]
+    },
+    "2": [
+      "TP-0001",
+      "TP-0002",
+      "TP-0003",
+      "TP-0004",
+      "TP-0005",
+      "TP-0006",
+      "TP-0007",
+      "TP-0008",
+      "TP-0009",
+      "TP-0010",
+      "TP-0011",
+      "TP-0012",
+      "TP-0013",
+      "TP-0014"
+    ],
+    "3": {
+      "defect_list": [
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "1. Decisions",
+          "req_ids": [
+            "REQ-0005"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "2. Action Items",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0008"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "3. Requirement Changes",
+          "req_ids": [
+            "REQ-0006",
+            "REQ-0009",
+            "REQ-0011"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "4. Test Outcomes",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0002",
+            "REQ-0005"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "MoM_DesignReview04.docx",
+          "req_ids": []
+        }
+      ],
+      "analysis": [
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "MoM_DesignReview04.docx",
+          "req_ids": []
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "1. Decisions",
+          "req_ids": [
+            "REQ-0005"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "2. Action Items",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0008"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "3. Requirement Changes",
+          "req_ids": [
+            "REQ-0006",
+            "REQ-0009",
+            "REQ-0011"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "4. Test Outcomes",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0002",
+            "REQ-0005"
+          ]
+        }
+      ]
+    },
+    "4": [
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0003",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0003",
+        "to": "REQ-0005",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0003",
+        "to": "REQ-0006",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0004",
+        "to": "REQ-0003",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0004",
+        "to": "REQ-0005",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0003",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0006",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0002",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0005",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0002",
+        "to": "REQ-0007",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0007",
+        "to": "REQ-0002",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0007",
+        "to": "REQ-0008",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0007",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0009",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0008",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0010",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0010",
+        "to": "REQ-0009",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0101",
+        "to": "IR-0102",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0102",
+        "to": "IR-0103",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0103",
+        "to": "IR-0102",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0103",
+        "to": "IR-0104",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0002",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0002",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0006",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0002",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "C-acquisition.AcquisitionEngine",
+        "to": "REQ-0001",
+        "link_type": "implements",
+        "confidence": 0.800000011920929
+      },
+      {
+        "from": "C-processing.HealthMonitor",
+        "to": "REQ-0002",
+        "link_type": "implements",
+        "confidence": 0.800000011920929
+      },
+      {
+        "from": "TP-0001",
+        "to": "REQ-0001",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0002",
+        "to": "REQ-0003",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0003",
+        "to": "REQ-0004",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0004",
+        "to": "REQ-0005",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0005",
+        "to": "REQ-0006",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0006",
+        "to": "REQ-0002",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0007",
+        "to": "REQ-0007",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0008",
+        "to": "REQ-0008",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0009",
+        "to": "REQ-0009",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0010",
+        "to": "IR-0101",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0011",
+        "to": "IR-0102",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0012",
+        "to": "IR-0103",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0013",
+        "to": "IR-0104",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0014",
+        "to": "REQ-0011",
+        "link_type": "verifies",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "_compliance": {
+    "status": "pass",
+    "passed": true,
+    "missing_requirement_references": [],
+    "missing_sections": [],
+    "uncovered_requirements": [],
+    "referenced_ids": [
+      "IR-0101",
+      "IR-0102",
+      "IR-0103",
+      "IR-0104",
+      "REQ-0001",
+      "REQ-0002",
+      "REQ-0003",
+      "REQ-0004",
+      "REQ-0005",
+      "REQ-0006",
+      "REQ-0007",
+      "REQ-0008",
+      "REQ-0009",
+      "REQ-0010",
+      "REQ-0011"
+    ],
+    "registry_count": 45
+  }
+}

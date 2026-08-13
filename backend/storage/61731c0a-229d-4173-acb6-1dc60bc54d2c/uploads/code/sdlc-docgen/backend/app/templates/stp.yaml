@@ -1,0 +1,73 @@
+# Software Test Plan template schema
+template_id: stp
+doc_type: STP
+name: Software Test Plan
+version: "1.0"
+organization: RCI - Research Centre Imarat
+
+numbering:
+  section_id_format: "{N}.{M}"
+  requirement_id_format: "TP-{PROJECT}-{NNNN}"
+  annexure_prefix: "ANN"
+
+header:
+  document_control:
+    - {field: document_title, type: text, required: true}
+    - {field: document_number, type: text}
+    - {field: project_name, type: text, required: true}
+    - {field: revision, type: text, default: "Rev A"}
+    - {field: date, type: date}
+    - {field: prepared_by, type: text}
+    - {field: reviewed_by, type: text}
+    - {field: approved_by, type: text}
+  approval_signatures: true
+  table_of_contents: true
+
+sections:
+  - id: "1"
+    title: Introduction
+    type: free_text
+    required: true
+    data_sources: [srs, mom]
+    fields:
+      - {id: purpose, title: Purpose, type: free_text, required: true}
+      - {id: scope, title: Scope, type: free_text, required: true}
+      - {id: test_strategy, title: Test Strategy, type: free_text, required: true}
+
+  - id: "2"
+    title: Test Items and Features
+    type: free_text
+    required: true
+    data_sources: [srs, sdd]
+    fields:
+      - {id: test_items, title: Test Items, type: list, item_type: text}
+      - {id: features_to_test, title: Features to Test, type: list, item_type: text}
+      - {id: features_not_tested, title: Features Not to Test, type: list, item_type: text}
+
+  - id: "3"
+    title: Test Cases
+    type: requirements
+    required: true
+    data_sources: [srs, sdd]
+    requirement_filter:
+      req_type: test_case
+    output:
+      presentation: table
+      columns: [test_id, title, verifies, procedure, expected_result]
+    instructions: >-
+      One test case per testable requirement from the SRS. Derived
+      deterministically from the requirement registry; narrative refinement
+      only where a source gap exists.
+
+  - id: "4"
+    title: Test Traceability
+    type: traceability_matrix
+    required: true
+    data_sources: [traceability_links]
+    output:
+      presentation: table
+      columns: [requirement, test_case, link_type]
+    instructions: >-
+      Each test case links to the requirement it verifies via the
+      traceability_links table (link_type=verifies). Requirements without a
+      test case are flagged.

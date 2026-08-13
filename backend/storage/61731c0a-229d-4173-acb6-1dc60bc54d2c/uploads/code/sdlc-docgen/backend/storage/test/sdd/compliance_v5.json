@@ -1,0 +1,56 @@
+{
+  "status": "warn",
+  "passed": false,
+  "missing_requirement_references": [
+    "REQ-001",
+    "REQ-002",
+    "REQ-003",
+    "REQ-0030",
+    "REQ-004",
+    "REQ-0040",
+    "REQ-005",
+    "REQ-0050",
+    "REQ-006",
+    "REQ-0060",
+    "REQ-007"
+  ],
+  "missing_sections": [
+    "3"
+  ],
+  "uncovered_requirements": [
+    "REQ-0008",
+    "REQ-0009",
+    "REQ-0011",
+    "REQ-0012",
+    "REQ-0013",
+    "REQ-0014",
+    "REQ-0015",
+    "REQ-0016",
+    "REQ-0017",
+    "REQ-0018",
+    "REQ-0019"
+  ],
+  "referenced_ids": [
+    "REQ-0001",
+    "REQ-0002",
+    "REQ-0003",
+    "REQ-0004",
+    "REQ-0005",
+    "REQ-0006",
+    "REQ-0007",
+    "REQ-001",
+    "REQ-0010",
+    "REQ-002",
+    "REQ-0020",
+    "REQ-003",
+    "REQ-0030",
+    "REQ-004",
+    "REQ-0040",
+    "REQ-005",
+    "REQ-0050",
+    "REQ-006",
+    "REQ-0060",
+    "REQ-007"
+  ],
+  "registry_count": 20
+}

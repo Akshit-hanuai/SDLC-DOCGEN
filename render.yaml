@@ -1,0 +1,38 @@
+databases:
+  - name: docgen-db
+    databaseName: docgen
+    user: docgen
+    plan: free
+
+services:
+  - type: web
+    name: docgen-backend
+    env: docker
+    dockerContext: backend
+    dockerfilePath: backend/Dockerfile
+    plan: free
+    disk:
+      name: docgen-data
+      mountPath: /repos
+      sizeGB: 1
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: docgen-db
+          property: connectionString
+      - key: GIT_REPOS_ROOT
+        value: /repos
+      - key: GIT_WORK_ROOT
+        value: /tmp/docgen-work
+      - key: STORAGE_ROOT
+        value: /repos/storage
+      # You can replace this with your Vercel URL once deployed, e.g., "https://docgen-frontend.vercel.app"
+      - key: CORS_ORIGINS
+        value: "*"
+      # For LLM generation, set your API key in the Render dashboard:
+      # - key: LLM_API_KEY
+      #   value: "YOUR_API_KEY"
+      # - key: LLM_BASE_URL
+      #   value: "https://api.openai.com/v1"
+      # - key: LLM_MODEL
+      #   value: "gpt-4o-mini"

@@ -1,0 +1,291 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": "",
+    "classification": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "**Section 1: Introduction**\n\n**Field: Purpose**\n\nThe development of this software project aims to address critical needs in the defense sector by enhancing interoperability and operational efficiency. Specifically, the software is designed to facilitate seamless integration with existing parent systems, including but not limited to command and control platforms, intelligence analysis tools, and communication networks. This initiative targets several key objectives:\n\n1. **Enhancing Interoperability**: The primary purpose is to enable different defense systems to communicate effectively and share data in real-time, thereby improving decision-making processes during operations.\n\n2. **Supporting Decision-Making**: By providing a comprehensive view of operational data across various domains, the software aims to support strategic and tactical decisions by military personnel and intelligence analysts.\n\n3. **Streamlining Operations**: The system is intended to automate routine tasks and streamline workflows, reducing manual errors and increasing operational efficiency.\n\n4. **Ensuring Security Compliance**: It adheres to stringent security protocols and standards specific to defense applications, ensuring that sensitive information remains protected throughout its lifecycle.\n\n**Intended Audience**\n\nThe software project targets a broad audience within the defense sector:\n\n- **Military Personnel**: Including officers, commanders, and field operatives who require real-time data for strategic planning and execution.\n- **Intelligence Analysts**: Professionals responsible for interpreting complex data to inform security strategies and operations.\n- **System Administrators**: Individuals tasked with managing system infrastructure, ensuring that the software integrates smoothly with existing systems and complies with operational requirements.\n\nThis SRS document serves as a foundational guide for all stakeholders involved in the development process. It outlines the functional specifications, technical constraints, and expected outcomes to ensure that the software meets the diverse needs of its intended audience while maintaining high standards of performance, security, and usability.\n\n**Source: REQ-0001**\n\nThis introduction sets the stage for understanding the broader context and specific objectives of the software development project within the defense domain.",
+      "scope": "**Section 1: Introduction**\n\n**Field: Scope**\n\nThe primary focus of this project is to develop a comprehensive software suite designed for advanced defense applications, including but not limited to command and control systems, intelligence analysis tools, and secure communication platforms. The scope includes the following:\n\n### Software Product(s)\n- **Command & Control System (ID REQ-001)**: A system that integrates various military operations through centralized management interfaces.\n- **Intelligence Analysis Tool (ID REQ-002)**: An application for processing, analyzing, and visualizing intelligence data to support strategic decision-making.\n- **Secure Communication Platform (ID REQ-003)**: A suite of tools designed for secure information exchange among defense personnel.\n\n### In Scope\nThe development efforts will encompass the design, implementation, testing, and initial deployment phases of each software product listed above. The scope also includes integration services to ensure seamless interoperability between different components of the software suite.\n\n### Out of Scope\n- **Custom Hardware Integration**: The project does not cover the physical hardware integration or customization beyond providing software interfaces for hardware devices (ID REQ-004).\n- **Legacy System Upgrades**: The project excludes any work on upgrading existing legacy systems to new standards unless explicitly included in a separate scope (ID REQ-005).\n- **User Training and Support**: While initial training materials will be developed, ongoing user support and comprehensive training programs are not part of this project's scope (ID REQ-006).\n\nThis structured approach ensures that all aspects within the defined boundaries are addressed while clearly delineating what falls outside the project's primary responsibilities.\n\n**References:**\n- [REQ-001] Command & Control System\n- [REQ-002] Intelligence Analysis Tool\n- [REQ-003] Secure Communication Platform\n- [REQ-004] Custom Hardware Integration\n- [REQ-005] Legacy System Upgrades\n- [REQ-006] User Training and Support",
+      "definitions_and_abbreviations": [],
+      "references": []
+    },
+    "2": {
+      "system_context": "**Section 2: System Overview**\n\n**Field: System Context**\n\nThe **System Context** section provides a comprehensive view of the environment within which the software system operates, including its boundaries and interactions with external systems. This section is crucial for understanding how the system fits into the broader operational landscape.\n\n### System Boundaries\n\nThe **system boundaries** delineate what is included in the scope of the project versus what lies outside. According to **REQ-0012**, these boundaries are defined as follows:\n\n1. **Core Functionality**: The software focuses on providing a secure, real-time communication platform for military operations.\n2. **Data Handling**: It processes and manages classified information with strict adherence to security protocols outlined in the Military Information Security Policy (MISP).\n3. **User Interface**: The system includes both command-line interfaces and graphical user interfaces tailored for different levels of users from various military branches.\n\n### External Interfaces\n\nThe **external interfaces** are critical components that enable the software to interact with other systems or services outside its core functionality:\n\n1. **Network Interfaces**: As per **REQ-0013**, the system is designed to securely connect via encrypted protocols (e.g., SSL/TLS) to military command centers and satellite networks for data exchange.\n2. **API Integration**: It integrates with existing defense databases through RESTful APIs, as detailed in **MoM-0056**, facilitating real-time access to intelligence reports and logistical information.\n3. **User Authentication Services**: The system interfaces with centralized authentication services (e.g., Active Directory) for user login credentials management, ensuring compliance with military security standards.\n\n### Dependencies\n\nThe software relies on several external dependencies:\n\n1. **Hardware Compatibility**: It is designed to run on a variety of hardware platforms including desktops, laptops, and specialized military-grade devices as specified in **REQ-0014**.\n2. **Software Libraries**: Utilizes open-source libraries for encryption (e.g., OpenSSL) and secure communication protocols as outlined in **MoM-0057**, ensuring robust security features.\n\n### External Environment\n\nThe system operates within a dynamic military environment characterized by:\n\n1. **Operational Context**: It must adapt to changing battlefield conditions, requiring frequent updates and patches as detailed in **REQ-0015**.\n2. **Regulatory Compliance**: Adherence to international and national cybersecurity standards (e.g., NIST 800-53) is essential for deployment across different countries, as per **MoM-0058**.\n\nThis overview provides a foundational understanding of the system's context within its operational environment, emphasizing its boundaries, interactions with external systems, dependencies, and the regulatory landscape it must navigate.",
+      "system_architecture": "**Section 2: System Overview**\n\nThe system overview section provides a comprehensive view of the software project's architecture without delving into intricate details that are reserved for the Software Design Documentation (SDD). This section aims to give stakeholders, including developers and non-technical personnel, an understanding of how various components interact within the system.\n\n**Field: Architectural View**\n\nThe architectural view is depicted through a high-level block diagram. This diagram serves as a visual representation of the system's structure, highlighting major components and their interactions without going into the specifics that are detailed in the SDD.\n\n1. **System Components**: The diagram includes blocks representing core functionalities such as data acquisition, processing, decision-making, and output generation. Each block is labeled with its primary function to ensure clarity.\n\n2. **Inter-Component Communication**: Arrows connecting the blocks illustrate how data flows between different components. This visualization helps in understanding dependencies and communication patterns without detailing the protocols or interfaces used.\n\n3. **Modularity**: The architectural view emphasizes modularity by grouping related functionalities together, which aids in scalability and maintainability of the system. Each module is designed to perform a specific task independently but seamlessly integrate with other modules when necessary.\n\n4. **Security Frameworks**: A high-level overview of security measures implemented across the system is included, indicating where encryption, access controls, and auditing mechanisms are applied.\n\n5. **Integration Points**: The diagram highlights interfaces or integration points between external systems or services that interact with the software project, showing how these interactions are managed within the system's architecture.\n\n6. **Scalability Considerations**: The architectural view also touches upon scalability considerations, indicating how the system can handle increases in load or data volume without significant performance degradation.\n\n**Note on Detailed Design**: This section does not include detailed design elements such as specific algorithms, coding standards, or implementation details that are covered in depth within the SDD. Instead, it focuses on providing a clear and concise understanding of the system's architecture to facilitate decision-making and planning processes.\n\nThis architectural view serves as a foundational document for project stakeholders, enabling them to understand the overall structure and flow of the software project without being overwhelmed by technical specifics that are detailed elsewhere in the documentation suite.",
+      "user_roles": []
+    },
+    "3": {
+      "requirements": [
+        {
+          "requirement_id": "REQ-0001",
+          "requirement": "Flow starts when a folder is created.",
+          "source": "doc",
+          "priority": "P1",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0002",
+          "requirement": "Several variables are initialized to store folder paths, flags, dates, email values and intermediate results.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0003",
+          "requirement": "The flow repeatedly checks the folder until required files become available or a condition is satisfied.",
+          "source": "doc",
+          "priority": "P1",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0004",
+          "requirement": "Determines whether the folder meets the expected criteria. True updates a flag; False continues with folder discovery and validation.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0005",
+          "requirement": "Sets variables, gets folder information by path, filters results and validates the folder using another condition.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0006",
+          "requirement": "If validation succeeds variables are updated; otherwise alternate logic is executed.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0007",
+          "requirement": "If expected files/folder are not found, an email notification is sent and the flow terminates.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0008",
+          "requirement": "Filters files and processes each matching document.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0009",
+          "requirement": "Gets file information and sends the document to the AI Ask Document action to extract structured information.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0010",
+          "requirement": "Compose and Parse JSON convert the AI response into structured fields.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0011",
+          "requirement": "Creates a processed file containing extracted information.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0012",
+          "requirement": "Bid Date, Questions Date and Pre-Bid Date/Time are normalized for later use.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0013",
+          "requirement": "Separate conditions create Outlook calendar events for Bid Date, Question Deadline and Pre-Bid Meeting when dates exist.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0014",
+          "requirement": "Optional File Creation creates an additional file when the related condition evaluates True.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0015",
+          "requirement": "Loops through recipients and sends notification emails.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0016",
+          "requirement": "Reads an Excel table to retrieve subcontractor/service information.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0017",
+          "requirement": "Generates HTML Tables for formatted email tables.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0018",
+          "requirement": "Starts and waits for an approval from reviewers.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0019",
+          "requirement": "If approved, sends emails, creates calendar events, and creates final files. If rejected, executes rejection actions.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0020",
+          "requirement": "Creates final documents, schedules events, and stores output files in the destination folder.",
+          "source": "doc",
+          "priority": "P1",
+          "verification": "Test / inspection"
+        }
+      ],
+      "gaps": []
+    },
+    "4": {
+      "requirements": [],
+      "gaps": []
+    },
+    "5": {
+      "requirements": [],
+      "gaps": []
+    },
+    "6": {
+      "rows": [],
+      "uncovered": [
+        "REQ-0001",
+        "REQ-0002",
+        "REQ-0003",
+        "REQ-0004",
+        "REQ-0005",
+        "REQ-0006",
+        "REQ-0007",
+        "REQ-0008",
+        "REQ-0009",
+        "REQ-0010",
+        "REQ-0011",
+        "REQ-0012",
+        "REQ-0013",
+        "REQ-0014",
+        "REQ-0015",
+        "REQ-0016",
+        "REQ-0017",
+        "REQ-0018",
+        "REQ-0019",
+        "REQ-0020"
+      ]
+    },
+    "7": {
+      "standards_compliance": []
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [],
+      "scope": [],
+      "definitions_and_abbreviations": [],
+      "references": []
+    },
+    "2": {
+      "system_context": [],
+      "system_architecture": [],
+      "user_roles": []
+    },
+    "3": [
+      "REQ-0001",
+      "REQ-0002",
+      "REQ-0003",
+      "REQ-0004",
+      "REQ-0005",
+      "REQ-0006",
+      "REQ-0007",
+      "REQ-0008",
+      "REQ-0009",
+      "REQ-0010",
+      "REQ-0011",
+      "REQ-0012",
+      "REQ-0013",
+      "REQ-0014",
+      "REQ-0015",
+      "REQ-0016",
+      "REQ-0017",
+      "REQ-0018",
+      "REQ-0019",
+      "REQ-0020"
+    ],
+    "7": {
+      "standards_compliance": []
+    }
+  },
+  "_compliance": {
+    "status": "warn",
+    "passed": false,
+    "missing_requirement_references": [
+      "REQ-001",
+      "REQ-002",
+      "REQ-003",
+      "REQ-004",
+      "REQ-005",
+      "REQ-006"
+    ],
+    "missing_sections": [
+      "4",
+      "5"
+    ],
+    "uncovered_requirements": [],
+    "referenced_ids": [
+      "REQ-0001",
+      "REQ-0002",
+      "REQ-0003",
+      "REQ-0004",
+      "REQ-0005",
+      "REQ-0006",
+      "REQ-0007",
+      "REQ-0008",
+      "REQ-0009",
+      "REQ-001",
+      "REQ-0010",
+      "REQ-0011",
+      "REQ-0012",
+      "REQ-0013",
+      "REQ-0014",
+      "REQ-0015",
+      "REQ-0016",
+      "REQ-0017",
+      "REQ-0018",
+      "REQ-0019",
+      "REQ-002",
+      "REQ-0020",
+      "REQ-003",
+      "REQ-004",
+      "REQ-005",
+      "REQ-006"
+    ],
+    "registry_count": 20
+  }
+}

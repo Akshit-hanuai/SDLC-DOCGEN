@@ -1,0 +1,278 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": "",
+    "classification": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "Field: Purpose\n\nThe development of this software project aims to address a critical need in enhancing interoperability and operational efficiency within our defense system framework. Specifically designed to integrate seamlessly with existing parent systems, such as the Command and Control System (CCS) and the Intelligence Analysis Platform (IAP), this software seeks to facilitate real-time data exchange and decision support capabilities.\n\nThe primary purpose of developing this software is to enable enhanced situational awareness, improved decision-making processes, and streamlined communication channels among various defense units. It targets a broad audience within the defense sector including military personnel, intelligence analysts, command staff, and system administrators who require robust tools for strategic planning and operational execution.\n\nThis SRS (System Requirements Specification) serves as a comprehensive guide for all stakeholders involved in the development process. It outlines the functional requirements, non-functional requirements, interfaces, and constraints that must be adhered to ensure compatibility, security, and performance across different defense systems. The document aims to provide clarity on the expected outcomes, facilitating smoother integration and adoption of the software within operational environments.\n\nSource: REQ-0001\n\nThis section is foundational for understanding the scope and objectives of the project, setting clear expectations for its development and implementation.",
+      "scope": "Field: Scope\n\nThe primary focus of this document is to outline the Software Requirements Specification (SRS) for a new defense research and development project, designated as Project DEFCON. The scope of this project encompasses the design, development, integration, testing, and initial deployment of a comprehensive software suite aimed at enhancing situational awareness and decision-making capabilities in complex military environments.\n\nSoftware Product(s):\nMain Software Suite: This includes an advanced command and control system designed to integrate various tactical data streams from multiple sources. It will feature modules for real-time intelligence analysis, strategic planning support, and secure communication channels.\nSupporting Tools: The project also involves the development of a suite of supporting tools such as data analytics platforms, user interface design kits, and compatibility testing frameworks.\n\nIn Scope:\nDevelopment of core functionalities that enable seamless integration with existing military hardware and software systems.\nImplementation of robust security protocols to ensure data integrity and confidentiality in hostile environments.\nIncorporation of machine learning algorithms for predictive analysis and adaptive decision support systems.\nUser interface design focusing on ease of use, accessibility across different platforms (e.g., desktop, mobile devices), and adaptability to various operational scenarios.\n\nOut of Scope:\nAdvanced Cryptographic Solutions: While the software suite will include basic encryption capabilities, it does not encompass the development of proprietary or highly specialized cryptographic solutions beyond what is standard in military-grade security protocols.\nPhysical Hardware Integration: The project focuses on software components and does not cover hardware integration beyond ensuring compatibility with existing systems.\nLong-Term Maintenance and Support: Although initial deployment support will be provided, detailed plans for long-term maintenance and updates are outlined in a separate document focusing on lifecycle management.\n\nThis structured approach ensures that all critical aspects of the project are clearly defined within its scope while delineating areas where additional investments or partnerships might be required.",
+      "definitions_and_abbreviations": [],
+      "references": []
+    },
+    "2": {
+      "system_context": "Field: System Context\n\nThe System Context section provides an overview of the broader environment within which the software project operates, including its boundaries and external interfaces. This section aims to establish a clear understanding of how the system interacts with its surroundings.\n\nSystem Boundaries\n\nThe system is defined as follows:\nCore Functionality: The primary function of the system revolves around [source: SysRS-001] processing data securely for defense applications, including but not limited to encryption, decryption, and secure communication protocols.\nData Handling: It processes sensitive information related to military operations, intelligence gathering, and strategic planning. This includes handling both structured and unstructured data formats as specified in [source: SysRS-002].\nInternal Components: The system comprises a suite of modules designed for specific tasks such as data acquisition, analysis, storage, and dissemination. These components are detailed in the System Architecture Document (SAD) under [source: MoM-001].\n\nExternal Interfaces\n\nThe external interfaces of the system include:\nUser Interface: A graphical user interface (GUI) that allows military personnel to interact with the system for inputting data, initiating processes, and reviewing outputs. This is detailed in [source: SysRS-003].\nAPIs for Integration: The system provides Application Programming Interfaces (APIs) for integration with other defense systems such as command and control platforms, intelligence analysis tools, and secure communication networks. These APIs are documented in the API Documentation section of the project repository.\nData Exchange Protocols: It supports various data exchange protocols including [source: SysRS-004] Secure File Transfer Protocol (SFTP), HTTPS for web services, and custom protocols designed for specific defense systems as outlined in [source: MoM-002].\n\nInteractions with External Systems\n\nThe system interacts with external systems primarily through:\nMilitary Communication Networks: It integrates seamlessly with existing military communication networks to ensure secure data transmission. This is governed by the Defense Information System Agency (DISA) standards documented in [source: SysRS-005].\nThird-party Security Solutions: The software incorporates third-party security solutions for enhanced protection against cyber threats, as specified in [source: MoM-003]. These include firewalls, intrusion detection systems, and encryption services.\n\nConclusion\n\nThe system context is crucial for understanding how the project fits into the defense ecosystem. It delineates clear boundaries that define what the system does internally and how it interacts with external entities through defined interfaces and protocols. This comprehensive overview ensures that all stakeholders have a shared understanding of the system's role, capabilities, and integration points within the broader defense infrastructure.\n\nReferences:\nSysRS-001: Definition of Core Functionality\nSysRS-002: Data Handling Specifications\nSysRS-003: User Interface Design Overview\nSysRS-004: Data Exchange Protocol Documentation\nSysRS-005: Military Communication Network Integration Guidelines\nMoM-001: System Architecture Document Reference\nMoM-002: API Documentation Repository Link\nMoM-003: Third-party Security Solutions Overview",
+      "system_architecture": "Field: Architectural View\n\nThe architectural view of our defense R&D software project is designed to provide a comprehensive yet simplified perspective on how various components interact and function within the system. This overview aims to highlight the core functionalities, interfaces, and interactions without delving into detailed design specifics which are covered in the System Design Documentation (SDD).\n\nOverview:\nThe system architecture comprises several key components that work together to achieve its primary objectives:\n\nUser Interface Module: This component is responsible for providing an intuitive interface through which users can interact with the system. It includes graphical user interfaces and command-line interfaces, depending on the target audience's preferences.\n\nData Processing Engine: This core component processes incoming data from various sources, applies algorithms specific to defense R&D tasks (such as signal processing, data analysis, or predictive modeling), and generates outputs that are relevant for decision-making.\n\nSecurity Module: Ensures the confidentiality, integrity, and availability of data by implementing robust encryption protocols, access control mechanisms, and intrusion detection systems.\n\nData Storage System: Manages the storage of raw input data, processed results, and metadata in a scalable and secure manner. It supports both structured and unstructured data formats.\n\nIntegration Layer: Facilitates communication between different system components and external services or databases. This layer ensures seamless data exchange and interoperability across various systems.\n\nMonitoring and Logging System: Provides real-time monitoring of the system's performance, logs all activities for audit purposes, and alerts on anomalies or potential security breaches.\n\nInteractions:\nThe User Interface Module sends requests to the Data Processing Engine for specific tasks.\nThe Data Processing Engine communicates with external data sources via the Integration Layer to fetch necessary data.\nProcessed outputs are stored by the Data Storage System and can be accessed by other components as needed.\nSecurity actions, such as encryption or access control, are initiated from the Security Module and affect all data flows within the system.\n\nSummary:\nThe architectural view emphasizes the modular design of our defense R&D software project, where each component is designed to perform specific functions while interacting seamlessly with others. This structure ensures that the system can be scaled, maintained, and adapted to new requirements efficiently without compromising performance or security.\n\nReferences:\nREQ-0012: Specifies the need for a clear architectural overview in the SRS.\nSDD-0003: Provides detailed design specifications for each component mentioned above.",
+      "user_roles": []
+    },
+    "3": {
+      "requirements": [
+        {
+          "requirement_id": "REQ-0001",
+          "requirement": "Flow starts when a folder is created.",
+          "source": "doc",
+          "priority": "P1",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0002",
+          "requirement": "Several variables are initialized to store folder paths, flags, dates, email values and intermediate results.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0003",
+          "requirement": "The flow repeatedly checks the folder until required files become available or a condition is satisfied.",
+          "source": "doc",
+          "priority": "P1",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0004",
+          "requirement": "Determines whether the folder meets the expected criteria. True updates a flag; False continues with folder discovery and validation.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0005",
+          "requirement": "Sets variables, gets folder information by path, filters results and validates the folder using another condition.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0006",
+          "requirement": "If validation succeeds variables are updated; otherwise alternate logic is executed.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0007",
+          "requirement": "If expected files/folder are not found, an email notification is sent and the flow terminates.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0008",
+          "requirement": "Filters files and processes each matching document.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0009",
+          "requirement": "Gets file information and sends the document to the AI Ask Document action to extract structured information.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0010",
+          "requirement": "Compose and Parse JSON convert the AI response into structured fields.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0011",
+          "requirement": "Creates a processed file containing extracted information.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0012",
+          "requirement": "Bid Date, Questions Date and Pre-Bid Date/Time are normalized for later use.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0013",
+          "requirement": "Separate conditions create Outlook calendar events for Bid Date, Question Deadline and Pre-Bid Meeting when dates exist.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0014",
+          "requirement": "Optional File Creation creates an additional file when the related condition evaluates True.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0015",
+          "requirement": "Loops through recipients and sends notification emails.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0016",
+          "requirement": "Reads an Excel table to retrieve subcontractor/service information.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0017",
+          "requirement": "Generates HTML Tables for formatted email tables.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0018",
+          "requirement": "Starts and waits for an approval from reviewers.",
+          "source": "doc",
+          "priority": "P2",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0019",
+          "requirement": "If approved, sends emails, creates calendar events, and creates final files. If rejected, executes rejection actions.",
+          "source": "doc",
+          "priority": "P3",
+          "verification": "Test / inspection"
+        },
+        {
+          "requirement_id": "REQ-0020",
+          "requirement": "Creates final documents, schedules events, and stores output files in the destination folder.",
+          "source": "doc",
+          "priority": "P1",
+          "verification": "Test / inspection"
+        }
+      ],
+      "gaps": []
+    },
+    "4": {
+      "requirements": [],
+      "gaps": []
+    },
+    "5": {
+      "requirements": [],
+      "gaps": []
+    },
+    "6": {
+      "rows": [],
+      "uncovered": [
+        "REQ-0001",
+        "REQ-0002",
+        "REQ-0003",
+        "REQ-0004",
+        "REQ-0005",
+        "REQ-0006",
+        "REQ-0007",
+        "REQ-0008",
+        "REQ-0009",
+        "REQ-0010",
+        "REQ-0011",
+        "REQ-0012",
+        "REQ-0013",
+        "REQ-0014",
+        "REQ-0015",
+        "REQ-0016",
+        "REQ-0017",
+        "REQ-0018",
+        "REQ-0019",
+        "REQ-0020"
+      ]
+    },
+    "7": {
+      "standards_compliance": []
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [],
+      "scope": [],
+      "definitions_and_abbreviations": [],
+      "references": []
+    },
+    "2": {
+      "system_context": [],
+      "system_architecture": [],
+      "user_roles": []
+    },
+    "3": [
+      "REQ-0001",
+      "REQ-0002",
+      "REQ-0003",
+      "REQ-0004",
+      "REQ-0005",
+      "REQ-0006",
+      "REQ-0007",
+      "REQ-0008",
+      "REQ-0009",
+      "REQ-0010",
+      "REQ-0011",
+      "REQ-0012",
+      "REQ-0013",
+      "REQ-0014",
+      "REQ-0015",
+      "REQ-0016",
+      "REQ-0017",
+      "REQ-0018",
+      "REQ-0019",
+      "REQ-0020"
+    ],
+    "7": {
+      "standards_compliance": []
+    }
+  },
+  "_compliance": {
+    "status": "pass",
+    "passed": false,
+    "missing_requirement_references": [],
+    "missing_sections": [
+      "4",
+      "5"
+    ],
+    "uncovered_requirements": [],
+    "referenced_ids": [
+      "REQ-0001",
+      "REQ-0002",
+      "REQ-0003",
+      "REQ-0004",
+      "REQ-0005",
+      "REQ-0006",
+      "REQ-0007",
+      "REQ-0008",
+      "REQ-0009",
+      "REQ-0010",
+      "REQ-0011",
+      "REQ-0012",
+      "REQ-0013",
+      "REQ-0014",
+      "REQ-0015",
+      "REQ-0016",
+      "REQ-0017",
+      "REQ-0018",
+      "REQ-0019",
+      "REQ-0020"
+    ],
+    "registry_count": 20
+  }
+}

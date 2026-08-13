@@ -1,0 +1,769 @@
+{
+  "header": {
+    "date": "",
+    "revision": "Rev A",
+    "approved_by": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "project_name": "",
+    "classification": "",
+    "document_title": "",
+    "document_number": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "This System Requirement Specification (SRS) defines the system-level requirements for the telemetry acquisition subsystem of the [Project Name] project. This subsystem will support the [Parent System 1] and [Parent System 2] systems by acquiring, timestamping, buffering, and transmitting telemetry data to the ground segment.  The intended audience for this SRS is the development team, system engineers, and testers involved in the design, implementation, and testing of the telemetry acquisition subsystem.\n\nThis document outlines the functional and non-functional requirements necessary for the successful operation of the telemetry acquisition subsystem. The requirements are derived from the parent systems' specifications and ensure that the subsystem meets the project's objectives.",
+      "scope": "Scope: This System Requirement Specification (SRS) defines the system-level requirements for the telemetry acquisition subsystem of the [Project Name] R&D software project. The scope encompasses all aspects of the subsystem's functionality, performance, and operation.\n\nThe following are in scope:\n\nAcquisition and processing of telemetry data from at least three sensor channels simultaneously.\nTimestamping of acquired samples with a system time reference accurate to +/- 1 ms.\nBuffering of acquired samples before flow control application for each channel (minimum 10,000 samples).\nProviding acquired samples through a REST interface to the ground segment.\nRecording an engineering log with a minimum depth of 6 months of mission operations.\nSystem operation within a 28 V DC power envelope not exceeding 45 W.\n\nThe following are out of scope:\n\nDevelopment of specific sensor interfaces or integration with external systems.\nDetailed design and implementation of the REST interface.\nSpecific details regarding the engineering log format and content.\nDetailed analysis of power consumption for individual components.\n\nSource Requirements:\n\nREQ-0001: Acquisition and processing of telemetry data from at least three sensor channels simultaneously.\nREQ-0002: System shall have a mean time between failures (MTBF) of not less than 2000 hours.\nREQ-0003: The system shall timestamp every acquired sample with a system time reference accurate to +/- 1 ms.\nREQ-0004: The system shall buffer at least 10,000 samples per channel before flow control is applied. This refines REQ-0003 by requiring bounded buffering for time-tagged data.\nREQ-0005: The system shall expose acquired samples through a REST interface to the ground segment.\nREQ-0006: The system shall record an engineering log with a minimum depth of 6 months of mission operations.\nREQ-0007: The system shall sustain a sample ingestion rate of at least 100 Hz per channel.\nREQ-0008: The system shall restrict access to acquisition controls to authenticated operators only.\nREQ-0009: The system shall complete a software restart in less than 30 seconds after a fault.\nREQ-0010: The system shall operate within a 28 V DC power envelope not exceeding 45 W.",
+      "definitions_and_abbreviations": [
+        {
+          "term": "1. Scope",
+          "definition": "1. Scope"
+        },
+        {
+          "term": "2. Requirements / 2.2 Non-Functional Requirements",
+          "definition": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "term": "2. Requirements / 2.2 Non-Functional Requirements",
+          "definition": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "term": "2. Requirements / 2.2 Non-Functional Requirements",
+          "definition": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "term": "2. Requirements / 2.2 Non-Functional Requirements",
+          "definition": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "term": "2. Requirements / 2.2 Non-Functional Requirements",
+          "definition": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "term": "2. Requirements / 2.2 Non-Functional Requirements",
+          "definition": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "term": "2. Requirements / 2.2 Non-Functional Requirements",
+          "definition": "2. Requirements / 2.2 Non-Functional Requirements"
+        }
+      ],
+      "references": [
+        {
+          "ref_id": "1. Scope",
+          "title": "1. Scope",
+          "source": "1. Scope",
+          "revision": "1. Scope"
+        },
+        {
+          "ref_id": "REQ-0001",
+          "title": "2. Requirements / 2.2 Non-Functional Requirements",
+          "source": "2. Requirements / 2.2 Non-Functional Requirements",
+          "revision": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "ref_id": "REQ-0002",
+          "title": "2. Requirements / 2.2 Non-Functional Requirements",
+          "source": "2. Requirements / 2.2 Non-Functional Requirements",
+          "revision": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "ref_id": "2. Requirements / 2.2 Non-Functional Requirements",
+          "title": "2. Requirements / 2.2 Non-Functional Requirements",
+          "source": "2. Requirements / 2.2 Non-Functional Requirements",
+          "revision": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "ref_id": "2. Requirements / 2.2 Non-Functional Requirements",
+          "title": "2. Requirements / 2.2 Non-Functional Requirements",
+          "source": "2. Requirements / 2.2 Non-Functional Requirements",
+          "revision": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "ref_id": "2. Requirements / 2.2 Non-Functional Requirements",
+          "title": "2. Requirements / 2.2 Non-Functional Requirements",
+          "source": "2. Requirements / 2.2 Non-Functional Requirements",
+          "revision": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "ref_id": "2. Requirements / 2.2 Non-Functional Requirements",
+          "title": "2. Requirements / 2.2 Non-Functional Requirements",
+          "source": "2. Requirements / 2.2 Non-Functional Requirements",
+          "revision": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "ref_id": "2. Requirements / 2.2 Non-Functional Requirements",
+          "title": "2. Requirements / 2.2 Non-Functional Requirements",
+          "source": "2. Requirements / 2.2 Non-Functional Requirements",
+          "revision": "2. Requirements / 2.2 Non-Functional Requirements"
+        }
+      ]
+    },
+    "2": {
+      "user_roles": [
+        {
+          "role": "SysRS_v3.1.docx",
+          "privileges": "SysRS_v3.1.docx",
+          "description": "SysRS_v3.1.docx"
+        },
+        {
+          "role": "1. Scope",
+          "privileges": "1. Scope",
+          "description": "1. Scope"
+        },
+        {
+          "role": "2. Requirements / 2.2 Non-Functional Requirements",
+          "privileges": "2. Requirements / 2.2 Non-Functional Requirements",
+          "description": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "role": "2. Requirements / 2.2 Non-Functional Requirements",
+          "privileges": "2. Requirements / 2.2 Non-Functional Requirements",
+          "description": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "role": "2. Requirements / 2.2 Non-Functional Requirements",
+          "privileges": "2. Requirements / 2.2 Non-Functional Requirements",
+          "description": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "role": "2. Requirements / 2.2 Non-Functional Requirements",
+          "privileges": "2. Requirements / 2.2 Non-Functional Requirements",
+          "description": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "role": "2. Requirements / 2.2 Non-Functional Requirements",
+          "privileges": "2. Requirements / 2.2 Non-Functional Requirements",
+          "description": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "role": "2. Requirements / 2.2 Non-Functional Requirements",
+          "privileges": "2. Requirements / 2.2 Non-Functional Requirements",
+          "description": "2. Requirements / 2.2 Non-Functional Requirements"
+        }
+      ],
+      "system_context": "System Overview\n\nSystem Boundaries:\n\nThe system under development is responsible for acquiring, timestamping, buffering, and transmitting telemetry data from at least three sensor channels.  It interfaces with the ground segment via a REST interface to provide access to acquired samples. The system also maintains an engineering log of mission operations for at least six months.\n\nExternal Interfaces:\n\nGround Segment: The system exposes acquired samples through a REST interface to the ground segment, enabling data transfer and analysis.\nEngineering Log: The system records an engineering log with a minimum depth of six months of mission operation data. This log serves as a historical record for troubleshooting and operational analysis.\nPower Source: The system operates within a 28 V DC power envelope not exceeding 45 W, ensuring efficient power consumption and reliable operation.\n\nSystem Context:\n\nThe system operates in a controlled environment with defined boundaries to ensure data integrity and security. Access to acquisition controls is restricted to authenticated operators only, preventing unauthorized manipulation of the system. The system's Mean Time Between Failures (MTBF) must be not less than 2000 hours, ensuring continuous operation and minimizing downtime.  The system achieves a sample ingestion rate of at least 100 Hz per channel, enabling real-time data processing and analysis.\n\nSource: REQ-0001, REQ-0003, REQ-0004, REQ-0005, REQ-0006, REQ-0007, REQ-0008, REQ-0009, REQ-0010\n\nNote: This document provides a high-level overview of the system's boundaries and external interfaces. Further details regarding specific functionalities and interactions will be provided in subsequent sections of this specification.",
+      "system_architecture": "System Overview\n\nThe system is designed to acquire telemetry data from multiple sensor channels simultaneously and timestamp each sample with high accuracy.  It will buffer samples before flow control, ensuring reliable data delivery even under high-demand conditions. The system provides a REST interface for accessing acquired data and maintains a detailed engineering log of mission operations.\n\nKey Architectural Components:\n\nSensor Acquisition Module: Acquires telemetry data from multiple sensor channels.\nData Buffering Module:  Buffers acquired samples before flow control to maintain real-time data delivery.\nTimestamping Module: Timestamps each acquired sample with high accuracy.\nREST Interface Module: Exposes acquired data through a REST interface for ground segment access.\nEngineering Log Module: Records an engineering log of mission operations, maintaining at least six months of historical data.\nPower Management Module:  Operates within a 28 V DC power envelope not exceeding 45 W.\n\nNote: Detailed design information is provided in the System Design Document (SDD)."
+    },
+    "3": {
+      "gaps": [],
+      "requirements": [
+        {
+          "source": "sysrs",
+          "priority": "P1",
+          "requirement": "The system shall acquire telemetry data from at least 3 sensor channels simultaneously.",
+          "verification": "Test / inspection",
+          "requirement_id": "REQ-0001"
+        },
+        {
+          "source": "sysrs",
+          "priority": "P1",
+          "requirement": "The system shall timestamp every acquired sample with a system time reference accurate to +/- 1 ms.",
+          "verification": "Test / inspection",
+          "requirement_id": "REQ-0003"
+        },
+        {
+          "source": "sysrs",
+          "priority": "P1",
+          "requirement": "The system shall buffer at least 10000 samples per channel before flow control is applied. This refines REQ-0003 by requiring bounded buffering for time-tagged data.",
+          "verification": "Test / inspection",
+          "requirement_id": "REQ-0004"
+        },
+        {
+          "source": "sysrs",
+          "priority": "P1",
+          "requirement": "The system shall expose acquired samples through a REST interface to the ground segment.",
+          "verification": "Test / inspection",
+          "requirement_id": "REQ-0005"
+        },
+        {
+          "source": "sysrs",
+          "priority": "P1",
+          "requirement": "The system shall record an engineering log with a minimum depth of 6 months of mission operations.",
+          "verification": "Test / inspection",
+          "requirement_id": "REQ-0006"
+        },
+        {
+          "source": "mom",
+          "priority": "",
+          "requirement": "is added to require automatic fault recovery within 30 seconds, in addition to REQ-0009.",
+          "verification": "Test / inspection",
+          "requirement_id": "REQ-0011"
+        }
+      ]
+    },
+    "4": {
+      "gaps": [],
+      "requirements": [
+        {
+          "protocol": "",
+          "direction": "",
+          "interface": "",
+          "requirement": "| interface | The ground segment interface shall transmit telemetry sample envelopes as defined in api.proto (message TelemetrySample).",
+          "requirement_id": "IR-0101"
+        },
+        {
+          "protocol": "",
+          "direction": "",
+          "interface": "",
+          "requirement": "| interface | The acquisition command interface shall accept a StartCommand message to begin acquisition.",
+          "requirement_id": "IR-0102"
+        },
+        {
+          "protocol": "",
+          "direction": "",
+          "interface": "",
+          "requirement": "| interface | The health reporting interface shall expose an MTBF estimate as defined in api.proto (message HealthReport).",
+          "requirement_id": "IR-0103"
+        },
+        {
+          "protocol": "",
+          "direction": "",
+          "interface": "",
+          "requirement": "| interface | The sensor interface shall provide a raw sample stream at the configured sample rate.",
+          "requirement_id": "IR-0104"
+        },
+        {
+          "protocol": "api.proto",
+          "direction": "out",
+          "interface": "ground segment interface",
+          "requirement": "The ground segment interface shall transmit telemetry sample envelopes as defined in api.proto (message TelemetrySample).",
+          "requirement_id": "REQ-0101"
+        },
+        {
+          "protocol": "",
+          "direction": "in",
+          "interface": "acquisition command interface",
+          "requirement": "The acquisition command interface shall accept a StartCommand message to begin acquisition.",
+          "requirement_id": "REQ-0102"
+        },
+        {
+          "protocol": "api.proto",
+          "direction": "out",
+          "interface": "health reporting interface",
+          "requirement": "The health reporting interface shall expose an MTBF estimate as defined in api.proto (message HealthReport).",
+          "requirement_id": "REQ-0103"
+        },
+        {
+          "protocol": "",
+          "direction": "out",
+          "interface": "sensor interface",
+          "requirement": "The sensor interface shall provide a raw sample stream at the configured sample rate.",
+          "requirement_id": "REQ-0104"
+        }
+      ]
+    },
+    "5": {
+      "gaps": [],
+      "requirements": [
+        {
+          "target": "2000 hours",
+          "measure": "MTBF",
+          "category": "non_functional",
+          "requirement": "The system shall have a mean time between failures (MTBF) of not less than 2000 hours.",
+          "requirement_id": "REQ-0002"
+        },
+        {
+          "target": "100",
+          "measure": "Hz",
+          "category": "non_functional",
+          "requirement": "The system shall sustain a sample ingestion rate of at least 100 Hz per channel.",
+          "requirement_id": "REQ-0007"
+        },
+        {
+          "target": "",
+          "measure": "",
+          "category": "non_functional",
+          "requirement": "The system shall restrict access to acquisition controls to authenticated operators only.",
+          "requirement_id": "REQ-0008"
+        },
+        {
+          "target": "30",
+          "measure": "seconds",
+          "category": "non_functional",
+          "requirement": "The system shall complete a software restart in less than 30 seconds after a fault.",
+          "requirement_id": "REQ-0009"
+        }
+      ]
+    },
+    "6": {
+      "rows": [
+        {
+          "to": "IR-0102",
+          "from": "IR-0101",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "IR-0103",
+          "from": "IR-0102",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "IR-0102",
+          "from": "IR-0103",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "IR-0104",
+          "from": "IR-0103",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0001",
+          "from": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0002",
+          "from": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0009",
+          "from": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0002",
+          "from": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0005",
+          "from": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0009",
+          "from": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0011",
+          "from": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0001",
+          "from": "REQ-0008",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0006",
+          "from": "REQ-0008",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0009",
+          "from": "REQ-0006",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0011",
+          "from": "REQ-0006",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0001",
+          "from": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0005",
+          "from": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0011",
+          "from": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0005",
+          "from": "REQ-0002",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "to": "REQ-0001",
+          "from": "C-acquisition.AcquisitionEngine",
+          "link_type": "implements",
+          "confidence": 0.800000011920929
+        },
+        {
+          "to": "REQ-0002",
+          "from": "C-processing.HealthMonitor",
+          "link_type": "implements",
+          "confidence": 0.800000011920929
+        }
+      ],
+      "uncovered": [
+        "C-acquisition.Sample",
+        "C-api.HealthReport",
+        "C-api.StartCommand",
+        "C-api.TelemetrySample",
+        "C-server./acquire/start",
+        "C-server./acquire/stop",
+        "C-server./health",
+        "C-server./mtbf",
+        "C-server./samples",
+        "C-server.get_mtbf",
+        "C-server.get_samples",
+        "C-server.health",
+        "C-server.start_acquisition",
+        "C-server.stop_acquisition",
+        "REQ-0003",
+        "REQ-0004",
+        "REQ-0007",
+        "REQ-0010",
+        "REQ-0101",
+        "REQ-0102",
+        "REQ-0103",
+        "REQ-0104"
+      ]
+    },
+    "7": {
+      "standards_compliance": [
+        {
+          "clause": "IRS_v2.0.docx",
+          "status": "IRS_v2.0.docx",
+          "standard": "IRS_v2.0.docx"
+        },
+        {
+          "clause": "3. Interface Requirements",
+          "status": "3. Interface Requirements",
+          "standard": "3. Interface Requirements"
+        },
+        {
+          "clause": "2. Requirements / 2.2 Non-Functional Requirements",
+          "status": "2. Requirements / 2.2 Non-Functional Requirements",
+          "standard": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "clause": "2. Requirements / 2.2 Non-Functional Requirements",
+          "status": "2. Requirements / 2.2 Non-Functional Requirements",
+          "standard": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "clause": "2. Requirements / 2.2 Non-Functional Requirements",
+          "status": "2. Requirements / 2.2 Non-Functional Requirements",
+          "standard": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "clause": "2. Requirements / 2.2 Non-Functional Requirements",
+          "status": "2. Requirements / 2.2 Non-Functional Requirements",
+          "standard": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "clause": "2. Requirements / 2.2 Non-Functional Requirements",
+          "status": "2. Requirements / 2.2 Non-Functional Requirements",
+          "standard": "2. Requirements / 2.2 Non-Functional Requirements"
+        },
+        {
+          "clause": "2. Requirements / 2.2 Non-Functional Requirements",
+          "status": "2. Requirements / 2.2 Non-Functional Requirements",
+          "standard": "2. Requirements / 2.2 Non-Functional Requirements"
+        }
+      ]
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "1. Scope",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0003",
+            "REQ-0004",
+            "REQ-0005",
+            "REQ-0006"
+          ]
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": [
+            "REQ-0002",
+            "REQ-0007",
+            "REQ-0008",
+            "REQ-0009",
+            "REQ-0010"
+          ]
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        }
+      ],
+      "scope": [
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "1. Scope",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0003",
+            "REQ-0004",
+            "REQ-0005",
+            "REQ-0006"
+          ]
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": [
+            "REQ-0002",
+            "REQ-0007",
+            "REQ-0008",
+            "REQ-0009",
+            "REQ-0010"
+          ]
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        }
+      ],
+      "definitions_and_abbreviations": [
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "1. Scope",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0003",
+            "REQ-0004",
+            "REQ-0005",
+            "REQ-0006"
+          ]
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": [
+            "REQ-0002",
+            "REQ-0007",
+            "REQ-0008",
+            "REQ-0009",
+            "REQ-0010"
+          ]
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        }
+      ],
+      "references": [
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "1. Scope",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0003",
+            "REQ-0004",
+            "REQ-0005",
+            "REQ-0006"
+          ]
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": [
+            "REQ-0002",
+            "REQ-0007",
+            "REQ-0008",
+            "REQ-0009",
+            "REQ-0010"
+          ]
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        },
+        {
+          "source": "sysrs",
+          "source_file": "SysRS_v3.1.docx",
+          "heading": "2. Requirements / 2.2 Non-Functional Requirements",
+          "req_ids": []
+        }
+      ]
+    }
+  },
+  "_compliance": {
+    "status": "pass",
+    "passed": true,
+    "missing_requirement_references": [],
+    "missing_sections": [],
+    "uncovered_requirements": [],
+    "referenced_ids": [
+      "IR-0101",
+      "IR-0102",
+      "IR-0103",
+      "IR-0104",
+      "REQ-0001",
+      "REQ-0002",
+      "REQ-0003",
+      "REQ-0004",
+      "REQ-0005",
+      "REQ-0006",
+      "REQ-0007",
+      "REQ-0008",
+      "REQ-0009",
+      "REQ-0010",
+      "REQ-0011",
+      "REQ-0101",
+      "REQ-0102",
+      "REQ-0103",
+      "REQ-0104"
+    ],
+    "registry_count": 53
+  }
+}

@@ -1,0 +1,944 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "Purpose\n\nThe purpose of this document is to outline the System Technical Requirements (STR) for a defence R&D software project, as detailed in REQ-0001. This document aims to provide a comprehensive set of technical specifications that will guide the development and implementation phases of the project. It serves as a foundational reference for all stakeholders involved, ensuring alignment with strategic objectives and operational requirements specified in the initial project charter (PC-001). The STRs are designed to facilitate clear communication among developers, engineers, and other project team members, while also serving as a basis for quality assurance and system validation activities. By adhering to these requirements, the project is expected to deliver a robust, secure, and efficient software solution that meets or exceeds the performance standards set forth by the defence sector guidelines (DG-001).",
+      "scope": "Introduction: Scope\n\nThe scope of this project, designated as Project XYZ under Requirement ID REQ-0001, encompasses the development and implementation of advanced software solutions for defense applications. This initiative aims to innovate in areas such as cybersecurity, intelligence analysis, and command and control systems. The primary objective is to enhance operational capabilities through the integration of cutting-edge technologies that ensure strategic advantage.\n\nThe scope includes:\nResearch & Development: Focusing on foundational research and development activities to explore new methodologies and tools for defense software.\nSystem Design: Detailed design of software architectures tailored specifically for defense-related tasks, ensuring robustness and security.\nPrototype Development: Creation of working prototypes that demonstrate the feasibility and effectiveness of proposed solutions in real-world scenarios.\nIntegration & Testing: Comprehensive integration of developed components followed by rigorous testing to ensure reliability and performance under various conditions.\nDeployment & Support: Planning for the deployment of software systems into operational environments, along with ongoing support and maintenance services.\n\nThis project is designed to be adaptable, allowing for future expansions and modifications based on evolving defense needs and technological advancements. It aligns closely with strategic objectives outlined in Document XYZ (Ref: DOC-001), emphasizing innovation while maintaining compliance with international standards and regulations pertinent to defense technology development.\n\nNote: The scope delineated here is subject to change as per the outcomes of preliminary assessments and feedback from stakeholders, as detailed in Requirement ID REQ-0002.",
+      "references": []
+    },
+    "2": {
+      "requirements": [
+        {
+          "test_id": "TP-0001",
+          "title": "Verify IR-0101",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0002",
+          "title": "Verify IR-0102",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0003",
+          "title": "Verify IR-0103",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0004",
+          "title": "Verify IR-0104",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0005",
+          "title": "Verify REQ-0011",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0006",
+          "title": "Verify REQ-0001",
+          "status": "PASS",
+          "notes": "Result recorded in MoM for REQ-0001"
+        },
+        {
+          "test_id": "TP-0007",
+          "title": "Verify REQ-0003",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0008",
+          "title": "Verify REQ-0004",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0009",
+          "title": "Verify REQ-0005",
+          "status": "FAIL",
+          "notes": "Result recorded in MoM for REQ-0005"
+        },
+        {
+          "test_id": "TP-0010",
+          "title": "Verify REQ-0006",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0011",
+          "title": "Verify REQ-0002",
+          "status": "PASS",
+          "notes": "Result recorded in MoM for REQ-0002"
+        },
+        {
+          "test_id": "TP-0012",
+          "title": "Verify REQ-0007",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0013",
+          "title": "Verify REQ-0008",
+          "status": "UNTESTED",
+          "notes": ""
+        },
+        {
+          "test_id": "TP-0014",
+          "title": "Verify REQ-0009",
+          "status": "UNTESTED",
+          "notes": ""
+        }
+      ],
+      "gaps": [
+        "TP-0001",
+        "TP-0002",
+        "TP-0003",
+        "TP-0004",
+        "TP-0005",
+        "TP-0006",
+        "TP-0007",
+        "TP-0008",
+        "TP-0009",
+        "TP-0010",
+        "TP-0011",
+        "TP-0012",
+        "TP-0013",
+        "TP-0014"
+      ]
+    },
+    "3": {
+      "defect_list": [
+        {
+          "defect_id": "1. Decisions",
+          "description": "1. Decisions",
+          "severity": "1. Decisions",
+          "status": "1. Decisions"
+        },
+        {
+          "defect_id": "2. Action Items",
+          "description": "2. Action Items",
+          "severity": "2. Action Items",
+          "status": "2. Action Items"
+        },
+        {
+          "defect_id": "3. Requirement Changes",
+          "description": "3. Requirement Changes",
+          "severity": "3. Requirement Changes",
+          "status": "3. Requirement Changes"
+        },
+        {
+          "defect_id": "4. Test Outcomes",
+          "description": "4. Test Outcomes",
+          "severity": "4. Test Outcomes",
+          "status": "4. Test Outcomes"
+        },
+        {
+          "defect_id": "MoM_DesignReview04.docx",
+          "description": "MoM_DesignReview04.docx",
+          "severity": "MoM_DesignReview04.docx",
+          "status": "MoM_DesignReview04.docx"
+        }
+      ],
+      "analysis": "Overview:\nThe analysis section focuses on identifying defects, anomalies, and discrepancies in the telemetry acquisition subsystem design as discussed during Design Review Meeting 04 (MoM_DesignReview04). This includes reviewing decisions made, action items assigned, requirement changes implemented, and test outcomes that highlight performance issues.\n\nDecisions Made:\n\nTime-tagged Sample Buffer Implementation: The decision was made to implement a time-tagged sample buffer for all channels in the acquisition subsystem (Decision: REQ-0005). This ensures accurate timestamping of data samples which is critical for telemetry analysis and synchronization across different systems.\n\nVersioning REST Interface: It was agreed that the REST interface should be versioned from day one to facilitate easier updates, maintenance, and compatibility with future software versions (Decision: REQ-0005).\n\nAction Items:\n\nClarify Sampling Rate in SysRS: An action item was assigned to Dr. Sharma to update Section 2 of System Requirements Specification (SysRS) to clarify the sampling rate requirement for REQ-0001, with a due date set for September 1, 2026.\n\nConfirm Authentication Mechanism: Lt. Rao is tasked with confirming the authentication mechanism specified in REQ-0008 with the security panel by September 15, 2026.\n\nRequirement Changes:\n\nStructured JSON Logging Output: REQ-0006 was modified to require structured JSON logging output for enhanced data processing and analysis capabilities.\n\nAdd Automatic Fault Recovery: A new requirement (REQ-0011) was added alongside existing REQ-0009, mandating automatic fault recovery within 30 seconds.\n\nTest Outcomes:\n\nPASS: Sampling Rate Compliance: REQ-0001 passed the test with all three channels acquired during the hardware-in-loop demonstration, indicating that the sampling rate requirements were met.\n\nFAIL: Latency Budget Violation: REQ-0005 failed due to the sample retrieval endpoint not meeting latency budget during load testing, highlighting a performance issue that needs addressing.\n\nPASS: MTBF Performance: REQ-0002 passed with an MTBF estimate recorded above 2000 hours on the reference platform, indicating robust operational reliability.\n\nThis analysis provides insights into the design's current state and areas requiring attention or improvement based on the outcomes of Design Review Meeting 04."
+    },
+    "4": {
+      "rows": [
+        {
+          "from": "TP-0001",
+          "to": "IR-0101",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "IR-0101",
+          "to": "IR-0102",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "IR-0103",
+          "to": "IR-0102",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0002",
+          "to": "IR-0102",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "IR-0102",
+          "to": "IR-0103",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0003",
+          "to": "IR-0103",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "IR-0103",
+          "to": "IR-0104",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0004",
+          "to": "IR-0104",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0001",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "C-acquisition.AcquisitionEngine",
+          "to": "REQ-0001",
+          "link_type": "implements",
+          "confidence": 0.800000011920929
+        },
+        {
+          "from": "TP-0006",
+          "to": "REQ-0001",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0002",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0007",
+          "to": "REQ-0002",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0002",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0002",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "C-processing.HealthMonitor",
+          "to": "REQ-0002",
+          "link_type": "implements",
+          "confidence": 0.800000011920929
+        },
+        {
+          "from": "TP-0011",
+          "to": "REQ-0002",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0003",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0004",
+          "to": "REQ-0003",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0003",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0007",
+          "to": "REQ-0003",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "TP-0008",
+          "to": "REQ-0004",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0003",
+          "to": "REQ-0005",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0004",
+          "to": "REQ-0005",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0005",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0002",
+          "to": "REQ-0005",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0009",
+          "to": "REQ-0005",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0003",
+          "to": "REQ-0006",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0006",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0006",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0010",
+          "to": "REQ-0006",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0002",
+          "to": "REQ-0007",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0007",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0012",
+          "to": "REQ-0007",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0007",
+          "to": "REQ-0008",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0008",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0013",
+          "to": "REQ-0008",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0008",
+          "to": "REQ-0009",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0010",
+          "to": "REQ-0009",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0005",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0009",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0014",
+          "to": "REQ-0009",
+          "link_type": "verifies",
+          "confidence": 1.0
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0010",
+          "link_type": "refines",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0001",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0006",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "REQ-0009",
+          "to": "REQ-0011",
+          "link_type": "traces_to",
+          "confidence": 0.699999988079071
+        },
+        {
+          "from": "TP-0005",
+          "to": "REQ-0011",
+          "link_type": "verifies",
+          "confidence": 1.0
+        }
+      ],
+      "uncovered": [
+        "C-acquisition.Sample",
+        "C-api.HealthReport",
+        "C-api.StartCommand",
+        "C-api.TelemetrySample",
+        "C-server./acquire/start",
+        "C-server./acquire/stop",
+        "C-server./health",
+        "C-server./mtbf",
+        "C-server./samples",
+        "C-server.get_mtbf",
+        "C-server.get_samples",
+        "C-server.health",
+        "C-server.start_acquisition",
+        "C-server.stop_acquisition"
+      ]
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [],
+      "scope": [],
+      "references": []
+    },
+    "2": [
+      "TP-0001",
+      "TP-0002",
+      "TP-0003",
+      "TP-0004",
+      "TP-0005",
+      "TP-0006",
+      "TP-0007",
+      "TP-0008",
+      "TP-0009",
+      "TP-0010",
+      "TP-0011",
+      "TP-0012",
+      "TP-0013",
+      "TP-0014"
+    ],
+    "3": {
+      "defect_list": [
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "1. Decisions",
+          "req_ids": [
+            "REQ-0005"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "2. Action Items",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0008"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "3. Requirement Changes",
+          "req_ids": [
+            "REQ-0006",
+            "REQ-0009",
+            "REQ-0011"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "4. Test Outcomes",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0002",
+            "REQ-0005"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "MoM_DesignReview04.docx",
+          "req_ids": []
+        }
+      ],
+      "analysis": [
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "MoM_DesignReview04.docx",
+          "req_ids": []
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "1. Decisions",
+          "req_ids": [
+            "REQ-0005"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "2. Action Items",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0008"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "3. Requirement Changes",
+          "req_ids": [
+            "REQ-0006",
+            "REQ-0009",
+            "REQ-0011"
+          ]
+        },
+        {
+          "source": "mom",
+          "source_file": "MoM_DesignReview04.docx",
+          "heading": "4. Test Outcomes",
+          "req_ids": [
+            "REQ-0001",
+            "REQ-0002",
+            "REQ-0005"
+          ]
+        }
+      ]
+    },
+    "4": [
+      {
+        "from": "TP-0001",
+        "to": "IR-0101",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "IR-0101",
+        "to": "IR-0102",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "IR-0103",
+        "to": "IR-0102",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0002",
+        "to": "IR-0102",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "IR-0102",
+        "to": "IR-0103",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0003",
+        "to": "IR-0103",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "IR-0103",
+        "to": "IR-0104",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0004",
+        "to": "IR-0104",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0001",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "C-acquisition.AcquisitionEngine",
+        "to": "REQ-0001",
+        "link_type": "implements",
+        "confidence": 0.800000011920929
+      },
+      {
+        "from": "TP-0006",
+        "to": "REQ-0001",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0002",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0007",
+        "to": "REQ-0002",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0002",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0002",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "C-processing.HealthMonitor",
+        "to": "REQ-0002",
+        "link_type": "implements",
+        "confidence": 0.800000011920929
+      },
+      {
+        "from": "TP-0011",
+        "to": "REQ-0002",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0003",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0004",
+        "to": "REQ-0003",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0003",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0007",
+        "to": "REQ-0003",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "TP-0008",
+        "to": "REQ-0004",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0003",
+        "to": "REQ-0005",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0004",
+        "to": "REQ-0005",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0005",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0002",
+        "to": "REQ-0005",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0009",
+        "to": "REQ-0005",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0003",
+        "to": "REQ-0006",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0006",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0006",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0010",
+        "to": "REQ-0006",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0002",
+        "to": "REQ-0007",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0007",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0012",
+        "to": "REQ-0007",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0007",
+        "to": "REQ-0008",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0008",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0013",
+        "to": "REQ-0008",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0008",
+        "to": "REQ-0009",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0010",
+        "to": "REQ-0009",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0005",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0009",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0014",
+        "to": "REQ-0009",
+        "link_type": "verifies",
+        "confidence": 1.0
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0010",
+        "link_type": "refines",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0001",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0006",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "REQ-0009",
+        "to": "REQ-0011",
+        "link_type": "traces_to",
+        "confidence": 0.699999988079071
+      },
+      {
+        "from": "TP-0005",
+        "to": "REQ-0011",
+        "link_type": "verifies",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "_compliance": {
+    "status": "pass",
+    "passed": true,
+    "missing_requirement_references": [],
+    "missing_sections": [],
+    "uncovered_requirements": [],
+    "referenced_ids": [
+      "IR-0101",
+      "IR-0102",
+      "IR-0103",
+      "IR-0104",
+      "REQ-0001",
+      "REQ-0002",
+      "REQ-0003",
+      "REQ-0004",
+      "REQ-0005",
+      "REQ-0006",
+      "REQ-0007",
+      "REQ-0008",
+      "REQ-0009",
+      "REQ-0010",
+      "REQ-0011"
+    ],
+    "registry_count": 45
+  }
+}

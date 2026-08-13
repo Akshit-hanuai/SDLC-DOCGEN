@@ -1,0 +1,70 @@
+# Software Test Report template schema
+template_id: str
+doc_type: STR
+name: Software Test Report
+version: "1.0"
+organization: RCI - Research Centre Imarat
+
+numbering:
+  section_id_format: "{N}.{M}"
+  requirement_id_format: "TR-{PROJECT}-{NNNN}"
+  annexure_prefix: "ANN"
+
+header:
+  document_control:
+    - {field: document_title, type: text, required: true}
+    - {field: document_number, type: text}
+    - {field: project_name, type: text, required: true}
+    - {field: revision, type: text, default: "Rev A"}
+    - {field: date, type: date}
+    - {field: prepared_by, type: text}
+    - {field: reviewed_by, type: text}
+    - {field: approved_by, type: text}
+  approval_signatures: true
+  table_of_contents: true
+
+sections:
+  - id: "1"
+    title: Introduction
+    type: free_text
+    required: true
+    data_sources: [stp, mom]
+    fields:
+      - {id: purpose, title: Purpose, type: free_text, required: true}
+      - {id: scope, title: Scope, type: free_text, required: true}
+      - {id: references, title: References, type: table, columns: [ref_id, title, source]}
+
+  - id: "2"
+    title: Test Execution Summary
+    type: requirements
+    required: true
+    data_sources: [stp, mom]
+    requirement_filter:
+      req_type: test_case
+    output:
+      presentation: table
+      columns: [test_id, title, status, notes]
+    instructions: >-
+      Status (PASS/FAIL/UNTESTED) is sourced from the MoM test-outcome
+      records and test logs when available, otherwise marked UNTESTED.
+
+  - id: "3"
+    title: Defects and Anomalies
+    type: free_text
+    required: true
+    data_sources: [mom]
+    fields:
+      - {id: defect_list, title: Defect List, type: table, columns: [defect_id, description, severity, status]}
+      - {id: analysis, title: Analysis, type: free_text}
+
+  - id: "4"
+    title: Test Result Traceability
+    type: traceability_matrix
+    required: true
+    data_sources: [traceability_links]
+    output:
+      presentation: table
+      columns: [requirement, test_case, result, link_type]
+    instructions: >-
+      Requirement-by-requirement test result roll-up. Built from the
+      traceability_links table plus test outcomes.

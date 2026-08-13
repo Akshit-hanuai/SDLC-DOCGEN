@@ -1,0 +1,54 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "DRAFT (mock, no grounding chunks retrieved): please review and expand.",
+      "scope": "DRAFT (mock, no grounding chunks retrieved): please review and expand.",
+      "references": []
+    },
+    "2": {
+      "requirements": [],
+      "gaps": []
+    },
+    "3": {
+      "message_schemas": [],
+      "encoding": "DRAFT (mock, no grounding chunks retrieved): please review and expand."
+    },
+    "4": {
+      "rows": [],
+      "uncovered": []
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [],
+      "scope": [],
+      "references": []
+    },
+    "3": {
+      "message_schemas": [],
+      "encoding": []
+    }
+  },
+  "_compliance": {
+    "status": "pass",
+    "passed": false,
+    "missing_requirement_references": [],
+    "missing_sections": [
+      "2",
+      "4"
+    ],
+    "uncovered_requirements": [],
+    "referenced_ids": [],
+    "registry_count": 0
+  }
+}

@@ -1,0 +1,215 @@
+# =============================================================================
+# SDLC Document Template Schema
+# -----------------------------------------------------------------------------
+# One YAML file per document type (SRS, SDD, ICD, STP, STR). The generator,
+# renderer, compliance checker and editor read ONLY this schema - section
+# layout, field types, numbering and data sources are never hardcoded.
+#
+# Top-level keys:
+#   template_id     unique machine id (must equal the YAML filename stem)
+#   doc_type        one of: SRS | SDD | ICD | STP | STR
+#   name/version/organization   display metadata
+#   numbering       how rendered section ids and requirement ids are built
+#   header          front-matter / document-control block
+#   sections        ordered list of document sections
+#
+# Section keys:
+#   id, title                    rendered as "<id> <title>" heading
+#   type                         free_text | text | list | table |
+#                                requirements | traceability_matrix
+#   required                     must be present in the final document
+#   description                  human guidance, shown in the editor
+#   fields                       ordered sub-blocks inside the section
+#   data_sources                 which ingested inputs feed this section:
+#                                mom | sysrs | irs | code | srs | sdd | stp
+#   requirement_filter           for type=requirements: which reqs to include
+#   instructions                 extra guidance appended to the LLM prompt
+#                                and to the section's audit trail
+#
+# Placeholders used in numbering formats:
+#   {N}    top-level section number      {M}    sub-section number
+#   {PROJECT}   project name/slug        {NNNN} zero-padded counter
+# =============================================================================
+
+template_id: srs
+doc_type: SRS
+name: Software Requirements Specification
+version: "1.0"
+organization: RCI - Research Centre Imarat
+
+numbering:
+  section_id_format: "{N}.{M}"
+  requirement_id_format: "REQ-{PROJECT}-{NNNN}"
+  annexure_prefix: "ANN"
+
+header:
+  document_control:
+    - field: document_title
+      type: text
+      required: true
+    - field: document_number
+      type: text
+    - field: project_name
+      type: text
+      required: true
+    - field: revision
+      type: text
+      default: "Rev A"
+    - field: date
+      type: date
+    - field: prepared_by
+      type: text
+    - field: reviewed_by
+      type: text
+    - field: approved_by
+      type: text
+    - field: classification
+      type: enum
+      values: [UNCLASSIFIED, RESTRICTED, CONFIDENTIAL, SECRET]
+  approval_signatures: true
+  table_of_contents: true
+
+sections:
+  # -------------------------------------------------------------------------
+  # 1. Introduction
+  # -------------------------------------------------------------------------
+  - id: "1"
+    title: Introduction
+    type: free_text
+    required: true
+    description: Context, purpose and scope of the system and this document.
+    data_sources: [mom, sysrs]
+    fields:
+      - id: purpose
+        title: Purpose
+        type: free_text
+        required: true
+        instructions: >-
+          State why the software is being developed, which parent systems it
+          supports, and the intended audience of this SRS.
+      - id: scope
+        title: Scope
+        type: free_text
+        required: true
+        instructions: >-
+          Name the software product(s), list what is in scope and explicitly
+          what is out of scope. Cite source requirement ids where possible.
+      - id: definitions_and_abbreviations
+        title: Definitions, Acronyms and Abbreviations
+        type: table
+        columns: [term, definition]
+      - id: references
+        title: References
+        type: table
+        columns: [ref_id, title, source, revision]
+        instructions: >-
+          Each entry must carry a stable ref_id that can be cited elsewhere
+          in the document.
+
+  # -------------------------------------------------------------------------
+  # 2. System Overview
+  # -------------------------------------------------------------------------
+  - id: "2"
+    title: System Overview
+    type: free_text
+    required: true
+    data_sources: [sysrs, mom]
+    fields:
+      - id: system_context
+        title: System Context
+        type: free_text
+        required: true
+        instructions: >-
+          Describe the system boundaries and external interfaces. Ground every
+          claim in the SysRS or MoM records.
+      - id: system_architecture
+        title: Architectural View
+        type: free_text
+        instructions: >-
+          High-level block description only; detailed design belongs in the
+          SDD. Do not invent structure absent from source documents.
+      - id: user_roles
+        title: User Roles
+        type: table
+        columns: [role, description, privileges]
+
+  # -------------------------------------------------------------------------
+  # 3. Functional Requirements
+  # -------------------------------------------------------------------------
+  - id: "3"
+    title: Functional Requirements
+    type: requirements
+    required: true
+    data_sources: [sysrs, mom, irs]
+    requirement_filter:
+      req_type: functional
+    output:
+      presentation: table
+      columns: [requirement_id, requirement, source, priority, verification]
+    instructions: >-
+      Reproduce requirements verbatim from the requirements registry. Do not
+      paraphrase, add, or drop a requirement. Keep the source reference of
+      every row. Only group logically related requirements under sub-headings.
+
+  # -------------------------------------------------------------------------
+  # 4. Interface Requirements
+  # -------------------------------------------------------------------------
+  - id: "4"
+    title: Interface Requirements
+    type: requirements
+    required: true
+    data_sources: [irs, sysrs]
+    requirement_filter:
+      req_type: interface
+    output:
+      presentation: table
+      columns: [requirement_id, requirement, interface, direction, protocol]
+    instructions: >-
+      Sources are the IRS and interface-related SysRS clauses. Do not invent
+      message formats that are not present in the IRS.
+
+  # -------------------------------------------------------------------------
+  # 5. Non-Functional Requirements
+  # -------------------------------------------------------------------------
+  - id: "5"
+    title: Non-Functional Requirements
+    type: requirements
+    required: true
+    data_sources: [sysrs]
+    requirement_filter:
+      req_type: non_functional
+    output:
+      presentation: table
+      columns: [requirement_id, requirement, category, measure, target]
+    instructions: >-
+      Categories: reliability, performance, security, maintainability,
+      portability. Only include requirements with a measurable target.
+
+  # -------------------------------------------------------------------------
+  # 6. Traceability Matrix
+  # -------------------------------------------------------------------------
+  - id: "6"
+    title: Traceability Matrix
+    type: traceability_matrix
+    required: true
+    data_sources: [traceability_links]
+    output:
+      presentation: table
+      columns: [sysrs_req, srs_req, link_type, confidence]
+    instructions: >-
+      Generated from the traceability_links table. If a SysRS requirement has
+      no downstream SRS link, list it in the Uncovered Requirements subsection.
+
+  # -------------------------------------------------------------------------
+  # Annexure A. Compliance Statement
+  # -------------------------------------------------------------------------
+  - id: "7"
+    title: Compliance Statement
+    type: free_text
+    required: false
+    annexure: true
+    fields:
+      - id: standards_compliance
+        title: Standards and Regulatory Compliance
+        type: table
+        columns: [standard, clause, status]

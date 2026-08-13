@@ -1,0 +1,75 @@
+{
+  "header": {
+    "document_title": "",
+    "document_number": "",
+    "project_name": "",
+    "revision": "Rev A",
+    "date": "",
+    "prepared_by": "",
+    "reviewed_by": "",
+    "approved_by": "",
+    "classification": ""
+  },
+  "sections": {
+    "1": {
+      "purpose": "DRAFT (mock, no grounding chunks retrieved): please review and expand.",
+      "scope": "DRAFT (mock, no grounding chunks retrieved): please review and expand.",
+      "definitions_and_abbreviations": [],
+      "references": []
+    },
+    "2": {
+      "system_context": "DRAFT (mock, no grounding chunks retrieved): please review and expand.",
+      "system_architecture": "DRAFT (mock, no grounding chunks retrieved): please review and expand.",
+      "user_roles": []
+    },
+    "3": {
+      "requirements": [],
+      "gaps": []
+    },
+    "4": {
+      "requirements": [],
+      "gaps": []
+    },
+    "5": {
+      "requirements": [],
+      "gaps": []
+    },
+    "6": {
+      "rows": [],
+      "uncovered": []
+    },
+    "7": {
+      "standards_compliance": []
+    }
+  },
+  "_evidence": {
+    "1": {
+      "purpose": [],
+      "scope": [],
+      "definitions_and_abbreviations": [],
+      "references": []
+    },
+    "2": {
+      "system_context": [],
+      "system_architecture": [],
+      "user_roles": []
+    },
+    "7": {
+      "standards_compliance": []
+    }
+  },
+  "_compliance": {
+    "status": "pass",
+    "passed": false,
+    "missing_requirement_references": [],
+    "missing_sections": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "uncovered_requirements": [],
+    "referenced_ids": [],
+    "registry_count": 0
+  }
+}

@@ -1,0 +1,59 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: docgen-db
+    environment:
+      POSTGRES_USER: docgen
+      POSTGRES_PASSWORD: docgen
+      POSTGRES_DB: docgen
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/001-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U docgen -d docgen"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+    restart: unless-stopped
+
+  git-server:
+    build: ./git
+    container_name: docgen-git
+    volumes:
+      - gitrepos:/repos
+    ports:
+      - "9418:9418"
+
+  backend:
+    build: ../backend
+    container_name: docgen-backend
+    network_mode: host
+    environment:
+      DATABASE_URL: postgresql+asyncpg://docgen:docgen@localhost:5432/docgen
+      GIT_REPOS_ROOT: /repos
+      LLM_BASE_URL: http://127.0.0.1:11434/v1
+      LLM_MODEL: qwen2.5:0.5b
+      LLM_MODE: vllm
+      PORT: "8000"
+    volumes:
+      - gitrepos:/repos:rw
+      - ../backend/app:/srv/app/app:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  frontend:
+    build: ../frontend
+    container_name: docgen-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  gitrepos:

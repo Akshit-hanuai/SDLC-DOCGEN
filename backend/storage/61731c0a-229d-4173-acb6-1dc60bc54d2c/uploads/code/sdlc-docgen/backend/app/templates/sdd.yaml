@@ -1,0 +1,82 @@
+# Software Design Description template schema
+template_id: sdd
+doc_type: SDD
+name: Software Design Description
+version: "1.0"
+organization: RCI - Research Centre Imarat
+
+numbering:
+  section_id_format: "{N}.{M}"
+  requirement_id_format: "REQ-{PROJECT}-{NNNN}"
+  annexure_prefix: "ANN"
+
+header:
+  document_control:
+    - {field: document_title, type: text, required: true}
+    - {field: document_number, type: text}
+    - {field: project_name, type: text, required: true}
+    - {field: revision, type: text, default: "Rev A"}
+    - {field: date, type: date}
+    - {field: prepared_by, type: text}
+    - {field: reviewed_by, type: text}
+    - {field: approved_by, type: text}
+    - {field: classification, type: enum, values: [UNCLASSIFIED, RESTRICTED, CONFIDENTIAL, SECRET]}
+  approval_signatures: true
+  table_of_contents: true
+
+sections:
+  - id: "1"
+    title: Introduction
+    type: free_text
+    required: true
+    data_sources: [srs, mom]
+    fields:
+      - {id: purpose, title: Purpose, type: free_text, required: true}
+      - {id: scope, title: Scope, type: free_text, required: true}
+      - {id: related_documents, title: Related Documents, type: table, columns: [ref_id, title, source]}
+
+  - id: "2"
+    title: System Design Overview
+    type: free_text
+    required: true
+    data_sources: [srs, code]
+    fields:
+      - {id: design_approach, title: Design Approach, type: free_text, required: true}
+      - {id: module_decomposition, title: Module Decomposition, type: table, columns: [module, responsibility, source]}
+      - {id: architectural_decisions, title: Key Architectural Decisions, type: list, item_type: text}
+
+  - id: "3"
+    title: Module and Component Design
+    type: requirements
+    required: true
+    data_sources: [code]
+    requirement_filter:
+      req_type: code_artifact
+    output:
+      presentation: table
+      columns: [artifact_id, artifact, artifact_type, module, description]
+    instructions: >-
+      Populated from the tree-sitter code analysis registry: functions,
+      classes, endpoints and message schemas. Do not invent artifacts that do
+      not exist in the analysed codebase.
+
+  - id: "4"
+    title: Interface Design
+    type: free_text
+    required: true
+    data_sources: [irs, code]
+    fields:
+      - {id: external_interfaces, title: External Interfaces, type: table, columns: [interface, direction, protocol, source]}
+      - {id: data_structures, title: Shared Data Structures, type: free_text}
+
+  - id: "5"
+    title: Design Traceability
+    type: traceability_matrix
+    required: true
+    data_sources: [traceability_links]
+    output:
+      presentation: table
+      columns: [sysrs_req, srs_req, artifact, link_type]
+    instructions: >-
+      Shows which requirements each code artifact implements. Generated from
+      the traceability_links table; unreferenced artifacts are listed as gaps.
