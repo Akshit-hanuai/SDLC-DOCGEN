@@ -10,8 +10,8 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
 
     database_url: str = "postgresql+asyncpg://docgen:docgen@localhost:5432/docgen"
-    db_pool_size: int = 5
-    db_max_overflow: int = 10
+    db_pool_size: int = 20
+    db_max_overflow: int = 30
 
     max_upload_mb: int = 100
     request_id_header: str = "X-Request-ID"
@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     # Ask the LLM (Qwen) to extract rich details during ingestion. When no model
     # is reachable the mock client reports no details and the regex extractors
     # are used instead, so offline behaviour is unchanged.
-    llm_extraction_enabled: bool = True
+    llm_extraction_enabled: bool = False
     llm_extraction_max_chars: int = 20000
 
     embedding_model: str = "BAAI/bge-base-en-v1.5"

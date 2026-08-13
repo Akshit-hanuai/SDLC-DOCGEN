@@ -21,6 +21,8 @@ services:
   git-server:
     build: ./git
     container_name: docgen-git
+    networks:
+      - default
     volumes:
       - gitrepos:/repos
     ports:
@@ -29,11 +31,12 @@ services:
   backend:
     build: ../backend
     container_name: docgen-backend
-    network_mode: host
+    ports:
+      - "8000:8000"
     environment:
-      DATABASE_URL: postgresql+asyncpg://docgen:docgen@localhost:5432/docgen
+      DATABASE_URL: postgresql+asyncpg://docgen:docgen@db:5432/docgen
       GIT_REPOS_ROOT: /repos
-      LLM_BASE_URL: http://127.0.0.1:11434/v1
+      LLM_BASE_URL: http://sdlc-ollama:11434/v1
       LLM_MODEL: qwen2.5:0.5b
       LLM_MODE: vllm
       PORT: "8000"

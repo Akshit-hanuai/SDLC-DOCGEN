@@ -8,6 +8,10 @@ engine = create_async_engine(
     pool_pre_ping=True,
     pool_size=settings.db_pool_size,
     max_overflow=settings.db_max_overflow,
+    connect_args={
+        "timeout": 30,  # Connection timeout in seconds
+        "command_timeout": 60,  # Command timeout in seconds
+    },
 )
 
 SessionLocal = async_sessionmaker(engine, expire_on_commit=False)
