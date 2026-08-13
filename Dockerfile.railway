@@ -1,0 +1,10 @@
+# Railway deployment wrapper
+FROM docker/compose:latest
+
+WORKDIR /app
+
+COPY . .
+
+EXPOSE 5173 8000 5432
+
+CMD ["docker-compose", "-f", "infra/docker-compose.yml", "up"]
